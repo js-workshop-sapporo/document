@@ -20,7 +20,8 @@
 
 ### 変数について
 
-#### let, const で定義した変数を console.log() で確認してみよう 
+#### 変数を console.log() で確認してみよう 
+
 - 未定義
 - null
 - 真偽値
@@ -29,9 +30,39 @@
 - 配列
 - オブジェクト
 
+```javascript
+// 未定義
+let varIsUndefined;
+console.log(varIsUndefined);
+
+// null
+let varIsNull = null;
+console.log(varIsNull);
+
+// 文字列型
+let str = 'js workshop sapporo 第1回目';
+console.log(str);
+
+// 数値型
+let num = 123;
+console.log(num);
+
+// 配列
+let array = [1, 2, 3];
+console.log(array);
+
+// オブジェクト
+let obj = {
+  hoge: 'ほげ',
+  piyo: 'ぴよ'
+};
+console.log(obj);
+```
+
 ### データ型について
 
 #### 変数の型を console.log() で確認してみよう
+
 - 未定義
 - null
 - 真偽値
