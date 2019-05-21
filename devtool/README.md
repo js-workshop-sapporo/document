@@ -23,6 +23,9 @@ JavaScriptのデバッグは実装する上で必要なスキルになるため�
 
 ### 変数をconsole.log()してみる
 
+Developer Tool上で、変数を定義してconsole.logする方法です。
+改行をいれる場合は、 `Shift + Enter` でできます。
+
 ```js
 const jsWorkshopSapporo = 'JS Workshop Sapporo 勉強会第一回目'
 console.log(jsWorkshopSapporo)
@@ -30,3 +33,26 @@ console.log(jsWorkshopSapporo)
 ```
 
 ![変数をconsole.log()](assets/20190522005936.png)
+
+### ブレークポイントについて
+
+### 変数の確認
+
+- マウスを当てると変数を見る
+- スコープ内の変数をみる
+
+### プログラムのステップ実行
+
+- リジューム実行
+- ステップイン
+- ステップオーバー、ステップアウト
+
+### ステップ実行で処理の流れを確認する
+
+## 上級者向けの使い方
+
+### 条件付きブレークポイント
+
+### ログポイント
+
+### ライブ・エクスプレッション
