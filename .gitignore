@@ -1,0 +1,18 @@
+# os
+Thumbs.db
+.DS_Store
+
+# node
+node_modules/
+build/
+public_html/
+npm-debug.log
+
+# yarn
+yarn-error.log
+
+# IDE
+.idea/
+
+# env
+.envrc
