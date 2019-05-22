@@ -59,7 +59,63 @@ touch {index.html,app.js} // HTMLファイルとJSファイルを作成
 // app.jsに課題を記述する
 ```
 
-### 変数について
+## 変数について
+
+変数宣言のキーワードとして `var`、`let`、`const` の3つがある。
+
+識別子には次のルールがある。
+
+- 半角英数字、`_`（アンダースコア）、`$`（ダラー）の組み合わせである
+- ただし数字から始めることはできない
+- 予約語を使うことはできない
+
+予約語はMDNに一覧としてまとめられている。
+
+参考URL: [予約語 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Reserved_Words)
+
+### varについて
+
+過去に変数の宣言で使用されていた。
+
+関数の外で宣言された変数はグローバル変数になり、グローバル汚染してしまうので嫌われている。
+
+```javascript
+var hoge = 'ほげ';
+
+console.log(hoge);  // 結果: ほげ
+```
+
+### let・constについて（ES2015以降）
+
+`let`、`const` もES2015以降から使用できる変数宣言。
+
+`var` と違い、使用できるスコープを限定できる、グローバル変数にならない、重複できないなど、セキュアに使用できる。
+
+`const` は定数。
+
+再代入による変更および再宣言が出来ない仕様となっている。
+
+定数は慣例的にすべて大文字で宣言することが多い。
+
+```javascript
+let fuga = 'ふが';
+console.log(fuga);  // 結果: ふが
+
+fuga = '再代入';
+console.log(fuga);  // 結果: 再代入
+
+let fuga = '再び再代入';
+console.log(fuga);  // 結果: Error: Identifier 'fuga' has already been declared
+
+
+const PIYO = 'ぴよ';
+console.log(PIYO);  // 結果: ぴよ
+
+PIYO = 'ぴよ';
+console.log(PIYO);  // 結果: Error: Assignment to constant variable.
+```
+
+### 課題
 
 #### 変数を console.log() で確認してみましょう
 
@@ -100,9 +156,9 @@ const func = () => '関数';
 console.log(func());
 ```
 
-### データ型について
+## データ型について
 
-#### プリミティブデータ型
+### プリミティブデータ型
 
 - Boolean
 - Null
@@ -111,7 +167,7 @@ console.log(func());
 - String
 - Symbol (ECMAScript 6 の新データ型)
 
-#### それ以外の型
+### それ以外の型
 
 - Object
 
