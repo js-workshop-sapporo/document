@@ -36,6 +36,25 @@ console.log(jsWorkshopSapporo)
 
 ### ブレークポイントについて
 
+ブレークポイントは、プログラムの実行中に任意の行で止めることができる機能です。<br>
+設定することで現在の変数の値の確認などができます。forやイベントに関する状態の把握が可能です。
+
+```js
+// map新しい配列を取り出すときの変数を確認する
+const array = ['ほげ', 'ぴよ', 'ふー']
+array.map( value => {
+  return value
+})
+```
+
+1. Developer Toolを開く
+2. Sourcesパネルを開く
+3. 該当の行をクリックしてブレークポイントを設定する 8行目
+4. リロードする
+5. 止まったタイミングで現在のvalueの値をScopeのLocalで参照する
+
+<a href="https://www.dropbox.com/s/t1esjt5auyol0y4/20190523010950.mp4?dl=0" target="_blank">ブレークポイントの参考動画</a>
+
 ### 変数の確認
 
 - マウスを当てると変数を見る
