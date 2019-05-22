@@ -158,18 +158,18 @@ console.log(func());
 
 ## データ型について
 
-### プリミティブデータ型
+### JavaScriptの主なデータ型
 
-- Boolean
-- Null
-- Undefined
-- Number
-- String
-- Symbol (ECMAScript 6 の新データ型)
-
-### それ以外の型
-
-- Object
+| 分類 | データ型 | 概要 |
+| ---- | ---- | ---- |
+| 基本型 | 数値型 number | 数字を表す |
+|  | 文字列型 string | シングル・ダブルクォートで囲まれた0個以上の文字の集合 |
+|  | 真偽型 boolean | true or false |
+|  | シンボル型 (ES2015) symbol | シンボルを表す |
+|  | 特殊型 null/undefined | 値が空、未定義であることを表す |
+| 参照型 | 配列 array | データの集合（各要素にはインデックス番号でアクセスできる） |
+|  | オブジェクト object | データの集合（各要素には名前でアクセスできる key value） |
+|  | 関数 function | 一連の処理の集合 |
 
 #### 変数の型を console.log() と typeof演算子で確認してみましょう
 
@@ -205,7 +205,7 @@ let obj = {
 };
 console.log(typeof obj);
 
-// 関数
+// 関数（アロー関数）
 const func = () => '関数';
 console.log(typeof func);
 ```
