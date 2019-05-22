@@ -14,15 +14,56 @@
 
 ### 記述場所
 
-- <head>の配下
+1. `<head>` 要素の配下
+2. `<body>` 要素の配下（任意の位置）
+3. `<body>` 要素の配下（`</body>`閉じタグの直前）
+
+基本的にスクリプトの配置場所は、3が推奨されています。<br>
+3でまかなえないケースのみ1をしようします。<br>
+関数定義の `<script>` 要素を先に記述しなければならないというルールがあるためです。<br>
+`<body>`要素の配下で呼び出す必要がある関数は、`<head>`要素の配下で事前に読み込んでおく必要があります。<br>
+Google Analyticsなどのコードは `<head>` 配下に埋め込むことが一般的です。<br>
+また、スクリプトからスタイルシートを出力するような状況でも1を仕様することがあります。<br>
+1は外部ウィジェットのコードを埋め込む状況以外は使用することはほとんどありません。
+
+課題では3で進めるようにしていきます。
 
 ## 課題
+
+### 作業ファイルを作成
+
+```sh
+cd ~/Workspace  // 自身のワークスペースに移動
+mkdir js-workshop-sapporo-vol1 // 作業するフォルダを作成
+cd js-workshop-sapporo-vol1 // 作業フォルダに移動する
+touch {index.html,app.js} // HTMLファイルとJSファイルを作成
+```
+
+作業用のHTMLを作成する
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Workshop Sapporo vol 1</title>
+</head>
+<body>
+<h1>JS Workshop Sapporo vol 1</h1>
+<script src="app.js"></script>
+</body>
+</html>
+```
+
+```js
+// app.jsに課題を記述する
+```
 
 ### 変数について
 
 #### 変数を console.log() で確認してみましょう
 
-```javascript
+```js
 // 未定義
 let varIsUndefined;
 console.log(varIsUndefined);
@@ -76,7 +117,7 @@ console.log(func());
 
 #### 変数の型を console.log() と typeof演算子で確認してみましょう
 
-```javascript
+```js
 // 未定義
 let varIsUndefined;
 console.log(typeof varIsUndefined);
