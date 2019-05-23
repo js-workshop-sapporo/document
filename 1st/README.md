@@ -97,6 +97,8 @@ console.log(hoge);  // 結果: ほげ
 
 定数は慣例的にすべて大文字で宣言することが多い。
 
+IE11でも使用できる。
+
 ```javascript
 let fuga = 'ふが';
 console.log(fuga);  // 結果: ふが
@@ -151,7 +153,7 @@ let obj = {
 };
 console.log(obj);
 
-// 関数
+// 関数（アロー関数）
 const func = () => '関数';
 console.log(func());
 ```
@@ -170,6 +172,65 @@ console.log(func());
 | 参照型 | 配列 array | データの集合（各要素にはインデックス番号でアクセスできる） |
 |  | オブジェクト object | データの集合（各要素には名前でアクセスできる key value） |
 |  | 関数 function | 一連の処理の集合 |
+
+#### 文字列型（string）
+
+文字列型を作成するには文字列リテラルを使用する。
+
+`String()` コンストラクタを使って文字列を作成することも可能だが冗長なので、基本的には文字列リテラルを使用する。
+
+文字列リテラルは `"` ダブルクォート、`'` シングルクォート、 そして、ES2015から使用可能になった `｀` バッククォートの3種類が存在する。
+
+```javascript
+let doubleQuote = "文字列";
+console.log(doubleQuote);   // 結果: 文字列
+
+let singleQuote = '文字列';
+console.log(singleQuote);   // 結果: 文字列
+
+let backQuote   = `文字列`;
+console.log(backQuote);   // 結果: 文字列
+```
+
+ダブルクォートとシングルクォートは機能的に大差ないので、プロジェクトの規約に併せて使う。
+
+バッククォートはテンプレートリテラルとも呼ばれ、ダブルとシングルには無い機能が追加されている。
+
+バッククォートで囲われた文字列は改行をそのまま入力することが出来る。
+
+```javascript
+let multiLineText1 = `ほげ
+ふが
+ぴよ`;
+console.log(multiLineText1);
+/* 結果 ========
+ほげ
+ふが
+ぴよ
+================ */
+
+let multiLineText2 = 'ほげ
+ふが
+ぴよ';
+console.log(multiLineText2);
+// シングルクォート（ダブルクォート）の場合はエラーが返ってくる
+// 結果: Uncaught SyntaxError: Invalid or unexpected token
+
+let multiLineText3 = 'ほげ\nふが\nぴよ';
+console.log(multiLineText3);
+/* 結果 ======== 
+ほげ
+ふが
+ぴよ
+================ */
+```
+
+もう一つの機能は `$` を接頭辞とした中括弧で囲うことによってリテラル内で変数が使える。
+
+```javascript
+let text = 'World!';
+console.log(`Hello ${text}`); // 結果: Hello World!
+```
 
 #### 変数の型を console.log() と typeof演算子で確認してみましょう
 
