@@ -1,4 +1,4 @@
-# js workshop sapporo 第1回目
+# js workshop sapporo vol1
 
 1. JavaScriptについて
 2. 基本的な書き方について
