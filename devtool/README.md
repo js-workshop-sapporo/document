@@ -48,10 +48,10 @@ array.map( value => {
 ```
 
 1. Developer Toolを開く
-2. Sourcesパネルを開く
+2. Sourcesタブを開く
 3. 該当の行をクリックしてブレークポイントを設定する 8行目
 4. リロードする
-5. 止まったタイミングで現在のvalueの値をScopeのLocalで参照する
+5. 止まったタイミングで現在のvalueの値をScopeパネルのLocalで参照する
 
 <a href="https://www.dropbox.com/s/t1esjt5auyol0y4/20190523010950.mp4?dl=0" target="_blank">ブレークポイントの参考動画</a>
 

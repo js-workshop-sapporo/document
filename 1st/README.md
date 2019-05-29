@@ -5,12 +5,11 @@
 3. 変数について
 4. データ型について
 
-
-## JavaScriptについて
+## 1.JavaScriptについて
 
 ブラウザで使われてる言語。最近ではサーバサイドのNode.jsが存在する
 
-## 基本的な書き方について
+## 2.基本的な書き方について
 
 ### 記述場所
 
@@ -28,9 +27,12 @@ Google Analyticsなどのコードは `<head>` 配下に埋め込むことが一
 
 課題では3で進めるようにしていきます。
 
-## 課題
+### 課題1
 
-### 作業ファイルを作成
+作業用のファイルを作ってみましょう。  
+index.htmlとapp.jsを作って作業環境を作ります。
+
+#### 作業ファイルを作成
 
 ```sh
 cd ~/Workspace  // 自身のワークスペースに移動
@@ -39,7 +41,8 @@ cd js-workshop-sapporo-vol1 // 作業フォルダに移動する
 touch {index.html,app.js} // HTMLファイルとJSファイルを作成
 ```
 
-作業用のHTMLを作成する
+1.作業用のHTMLファイルを作成する
+2.作業用のJSファイルを作成する
 
 ```html
 <!DOCTYPE html>
@@ -56,10 +59,12 @@ touch {index.html,app.js} // HTMLファイルとJSファイルを作成
 ```
 
 ```js
+// Strictモードを宣言しJavaScriptの危険な構文を禁止する
+'use strict'
 // app.jsに課題を記述する
 ```
 
-## 変数について
+## 3.変数について
 
 変数宣言のキーワードとして `var`、`let`、`const` の3つがある。
 
@@ -117,9 +122,12 @@ PIYO = 'ぴよ';
 console.log(PIYO);  // 結果: Error: Assignment to constant variable.
 ```
 
-### 課題
+### 課題2
 
 #### 変数を console.log() で確認してみましょう
+
+作成した変数をconsole.logで確認します。  
+このとき、作業用ファイルのHTMLをブラウザで開いてみましょう。
 
 ```js
 // 未定義
@@ -158,7 +166,7 @@ const func = () => '関数';
 console.log(func());
 ```
 
-## データ型について
+## 4.データ型について
 
 ### JavaScriptの主なデータ型
 
@@ -232,7 +240,11 @@ let text = 'World!';
 console.log(`Hello ${text}`); // 結果: Hello World!
 ```
 
+### 課題4
+
 #### 変数の型を console.log() と typeof演算子で確認してみましょう
+
+定義した変数の型を確認してみましょう。
 
 ```js
 // 未定義

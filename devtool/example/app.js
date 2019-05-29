@@ -4,7 +4,9 @@ console.log('Hello Developer Tool');
 const hoge = 'JS Workshop Sapporo';
 
 const array = ['ほげ', 'ぴよ', 'ふー']
-const new_array = array.map(value => {
+let new_array = array.map(value => {
   return value
 })
 
+// new_arrayに新しい値をいれる
+new_array.push('ふが')
