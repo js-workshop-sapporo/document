@@ -181,6 +181,38 @@ console.log(func());
 |  | オブジェクト object | データの集合（各要素には名前でアクセスできる key value） |
 |  | 関数 function | 一連の処理の集合 |
 
+#### 数値型（number）
+
+数値型を作成するには `Number()` コンストラクタから生成（new演算子は使わない）するか、リテラルでプリミティブ値を作成する方法がある。
+
+ベターなのはリテラルでプリミティブ値を作成する方法である。
+
+文字列の整数をキャスト（別の型に変換）するのに `Number()` コンストラクタを使用する場合はある。
+
+```javascript
+let fromNewConstructor = new Number(1);
+console.log(fromNewConstructor) // 結果: 1
+console.log(typeof fromNewConstructor); // 結果: 'object'
+
+let fromConstructor = Number(1);
+console.log(fromConstructor) // 結果: 1
+console.log(typeof fromConstructor); // 結果: 'number'
+
+let fromLiteral = 1;
+console.log(fromLiteral) // 結果: 1
+console.log(typeof fromLiteral); // 結果: 'number'
+```
+
+`Number()` コンストラクタの引数に与えられた値が数値型に変換できない場合は `NaN` を返す。
+
+```javascript
+let fromConstructorWithArgs1 = Number('abc');
+console.log(fromConstructorWithArgs1) // 結果: NaN
+
+let fromConstructorWithArgs2 = Number('123');
+console.log(fromConstructorWithArgs2) // 結果: 123
+```
+
 #### 文字列型（string）
 
 文字列型を作成するには文字列リテラルを使用する。
