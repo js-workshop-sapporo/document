@@ -272,6 +272,23 @@ let text = 'World!';
 console.log(`Hello ${text}`); // 結果: Hello World!
 ```
 
+#### 真偽値型（boolean）
+`true` or `false` を表すオブジェクト。
+
+`Boolean()` コンストラクタを使用して生成する（new 演算子は使わない）か、リテラルでプリミティブ値を生成することができる。
+
+```javascript
+let fromConstructorOfBoolean = Boolean(0);
+console.log(fromConstructorOfBoolean) // 結果: false
+console.log(typeof fromConstructorOfBoolean); // 結果: 'boolean'
+
+let fromLiteralOfBoolean = false;
+console.log(fromLiteralOfBoolean) // 結果: false
+console.log(typeof fromLiteralOfBoolean); // 結果: 'boolean'
+```
+
+JavaScriptの特徴として値が `0`、`-0`、`null`、`false`、`NaN`、`undefined` 、`''`（空文字列）であれば `false` になり、それ以外の全ての値は `true` になります。
+
 ### 課題4
 
 #### 変数の型を console.log() と typeof演算子で確認してみましょう
