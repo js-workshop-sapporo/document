@@ -289,7 +289,7 @@ console.log(typeof fromLiteralOfBoolean); // 結果: 'boolean'
 
 JavaScriptの特徴として値が `0`、`-0`、`null`、`false`、`NaN`、`undefined` 、`''`（空文字列）であれば `false` になり、それ以外の全ての値は `true` になります。
 
-### 課題4
+### 課題3
 
 #### 変数の型を console.log() と typeof演算子で確認してみましょう
 
