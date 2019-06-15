@@ -287,7 +287,76 @@ console.log(fromLiteralOfBoolean) // 結果: false
 console.log(typeof fromLiteralOfBoolean); // 結果: 'boolean'
 ```
 
-JavaScriptの特徴として値が `0`、`-0`、`null`、`false`、`NaN`、`undefined` 、`''`（空文字列）であれば `false` になり、それ以外の全ての値は `true` になります。
+JavaScriptの特徴として値が `0`、`-0`、`null`、`false`、`NaN`、`undefined` 、`''`（空文字列）であれば `false` になり、それ以外の全ての値は `true` になる。
+
+#### 配列（array）
+配列を作成するには配列リテラルを使用するのが一般的。
+値をカンマで区切ってカギ括弧 `[]` で全体を囲う。
+
+```javascript
+const TEAM_NACS = ['森崎','大泉','安田','音尾','佐藤'];
+``` 
+
+配列の個々の値を配列の要素と呼び、配列の要素は左から順番に 0,1,2,3... とインデックス（番号）が割り当てられる。
+
+| index | 要素 |
+| ---- | ---- |
+| 0 | 森崎 |
+| 1 | 大泉 |
+| 2 | 安田 |
+| 3 | 音尾 |
+| 4 | 佐藤 |
+
+個々の値にアクセスするには `配列[index]` でアクセスできる。
+
+上記の `TEAM_NACS` 変数の場合だと下記のようにアクセスする。
+
+```javascript
+const TEAM_NACS = ['森崎','大泉','安田','音尾','戸次'];
+console.log(TEAM_NACS[0]); // 森崎
+console.log(TEAM_NACS[1]); // 大泉
+console.log(TEAM_NACS[2]); // 安田
+console.log(TEAM_NACS[5]); // 5番目の要素は存在しないので undefined が返ってくる
+```
+
+配列リテラルを使い、要素を何も記述しなければ空の配列が生成される。
+
+```javascript
+const emptyArray = []; // 中身は空となる
+```
+
+#### オブジェクト（object）
+JSで最も重要なデータ型。オブジェクトリテラルで作成する。
+
+キー（名前）とバリュー（値）が対となった集まり。連想配列とも呼ばれる。
+
+変数に代入されたオブジェクトの値にアクセスするにはドット演算子かカギ括弧演算子を用いる。
+
+カギ括弧演算子を用いてアクセスする場合はキーをクォートで囲う。
+
+```javascript
+const oizumi = {
+  name: '大泉 洋',
+  age: 46,
+  blood: 'B',
+  job: '俳優・タレント・声優',
+  placeOfBirth: '北海道江別市大麻'
+};
+
+console.log(oizumi.name); // 大泉 洋
+console.log(oizumi.age); // 46
+console.log(oizumi['blood']); // B
+```
+
+前述のデータ型の表に記載したとおり、配列とオブジェクトは参照型なので、オブジェクトを代入した変数を別な変数に使っても最初に代入した変数が参照される。
+
+```javascript
+const fujiyan = { name: '藤村 忠寿', age: 54 };
+const hige = fujiyan;
+hige.name = 'ひげ';
+console.log(fujiyan); // { name: 'ひげ', age: 54 };
+console.log(hige);    // { name: 'ひげ', age: 54 };
+```
 
 ### 課題3
 
