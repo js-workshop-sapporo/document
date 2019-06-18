@@ -135,8 +135,8 @@ console.log(PIYO);  // 結果: Error: Assignment to constant variable.
 
 ### 課題2
 
-- [課題](https://github.com/js-workshop-sapporo/document/tree/master/1st/answer/answer2.md)
-- [回答](https://github.com/js-workshop-sapporo/document/tree/master/1st/task/task2.md)
+- [課題](https://github.com/js-workshop-sapporo/document/tree/master/1st/task/task2.md)
+- [解答](https://github.com/js-workshop-sapporo/document/tree/master/1st/answer/answer2.md)
 
 ## 4.データ型について
 
@@ -333,5 +333,5 @@ console.log(hige);    // { name: 'ひげ', age: 54 };
 
 ### 課題3
 
-- [課題](https://github.com/js-workshop-sapporo/document/tree/master/1st/answer/answer3.md)
-- [回答](https://github.com/js-workshop-sapporo/document/tree/master/1st/task/task3.md)
+- [課題](https://github.com/js-workshop-sapporo/document/tree/master/1st/task/task3.md)
+- [解答](https://github.com/js-workshop-sapporo/document/tree/master/1st/answer/answer3.md)
