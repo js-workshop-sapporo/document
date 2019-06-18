@@ -69,7 +69,7 @@ array.map( value => {
 4. 止まったタイミングで変数にマウスを当てて現在の変数を確認する
 5. Scope内のLocalの値で現在の変数を確認する
 
-- <a href=https://www.dropbox.com/s/syplngi8bnx8pfq/20190618171243.mp4?dl=0" target="_blank">変数の確認とスコープ内の変数を確認する</a>
+- <a href="https://www.dropbox.com/s/syplngi8bnx8pfq/20190618171243.mp4?dl=0" target="_blank">変数の確認とスコープ内の変数を確認する</a>
 
 ### プログラムのステップ実行
 
