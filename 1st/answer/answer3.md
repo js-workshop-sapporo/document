@@ -50,3 +50,17 @@ console.log(typeof func);  // function
 そもそも `typeof` 演算子はオブジェクトもしくはプリミティブ型を返す式になるので、 `null` を除くプリミティブ型以外はすべて `object` が返ってくる仕様となっています。
 
 参考URL: [typeof - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/typeof#Syntax)
+
+### Topics
+
+配列の型を判定する場合は、以下のようにtoStringでcallすると[object Array]を返すことが可能になります。  
+他にもNullも[object Null]と判定します。
+
+```
+var array = ['ぴよ', 'ふが', 'はー']
+var toString = Object.prototype.toString
+toString.call(array)  // [object Array]
+
+// Nullの型判定
+toSting.call(null)  // [object Null]
+```
