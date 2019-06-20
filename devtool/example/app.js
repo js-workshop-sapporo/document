@@ -13,7 +13,6 @@ let new_member = ss_member.map( value => {
 new_member.push('グッチー')
 
 function typeCheck(type) {
-  let types = type
   switch(typeof type) {
     case 'string':
       console.log('文字列')
