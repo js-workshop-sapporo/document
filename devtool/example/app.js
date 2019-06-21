@@ -1,3 +1,4 @@
+'use strict'
 console.log('Hello Developer Tool');
 
 // 変数の確認

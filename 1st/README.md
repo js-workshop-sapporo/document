@@ -331,6 +331,14 @@ console.log(fujiyan); // { name: 'ひげ', age: 54 };
 console.log(hige);    // { name: 'ひげ', age: 54 };
 ```
 
+### constの配列やオブジェクトの値を変更できるのは？
+
+MDNに記載されていました。
+
+> const 宣言は、値への読み取り専用の参照を作ります。その値が不変ということではなく、その変数識別子が再代入できないというだけです。たとえば、定数がオブジェクトのコンテンツの場合、オブジェクトのコンテンツ(例 その引数)自体は変更可能です。
+
+- [https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/const#Description](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/const#Description)
+
 ### 課題3
 
 - [課題](https://github.com/js-workshop-sapporo/document/tree/master/1st/task/task3.md)
