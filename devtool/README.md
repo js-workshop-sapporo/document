@@ -50,10 +50,10 @@ console.log(jsWorkshopSapporo)
 
 ```js
 // map新しい配列を取り出すときの変数を確認する
-const array = ['ほげ', 'ぴよ', 'ふー']
+const array = ['ほげ', 'ぴよ', 'ふー'];
 array.map( value => {
   return value
-})
+});
 ```
 
 1. Developer Toolを開く

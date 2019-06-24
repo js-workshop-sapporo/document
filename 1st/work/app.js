@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // 未定義
 let varIsUndefined;
