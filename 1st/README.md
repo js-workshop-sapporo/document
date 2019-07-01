@@ -339,6 +339,37 @@ MDNに記載されていました。
 
 - [https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/const#Description](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/const#Description)
 
+constは定数なんですが、一部を除いて再代入はできません。
+その一部は参照型の変数が対象です。
+
+普通の文字列や数字などを再代入するとエラーになります。
+定数の正体はアドレスということ。
+定数に制限があるのはアドレス変更（再代入）という意味になります。
+参照型はアドレス変更をせずに値を書き換えすることができるので、constで定義した値でも変更できるということになります。
+
+```
+const string = 'ただの文字列'
+string = '再代入する' // エラー
+const num = 1
+num = 100 // エラー
+```
+![01.png](assets/01.png)
+参照型の配列やオブジェクトとかは再代入できる
+```
+// 配列
+const array = ['hoge', 1, 'foo']
+array[1] = '再代入？'
+console.log(array')
+// ["hoge", "再代入？", "foo"]
+// オブジェクト
+const obj = {name: '名前', age: 17}
+obj['name'] = '新しい名前'
+console.log(obj)
+// {name: "新しい名前", age: 17} 名前を書き換えれる
+```
+![02.png](assets/02.png)
+![03.png](assets/03.png)
+
 ### 課題3
 
 - [課題](https://github.com/js-workshop-sapporo/document/tree/master/1st/task/task3.md)
