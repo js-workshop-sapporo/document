@@ -122,7 +122,7 @@ console.log(fuga);  // 結果: ふが
 fuga = '再代入';
 console.log(fuga);  // 結果: 再代入
 
-let fuga = '再び再代入';
+let fuga = '変数の再定義';
 console.log(fuga);  // 結果: Error: Identifier 'fuga' has already been declared
 
 
