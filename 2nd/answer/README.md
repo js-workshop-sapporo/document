@@ -55,13 +55,107 @@ console.log('奥さんの戻ったお金：' + wifeRefund + '円')
 ```
 
 ## 課題4の解答
+```javascript
+// この場合 NOTICE が表示される
+const vitality = 100
+
+if (vitality < 30) {
+  console.log('DANGER')
+} else if (30 <= vitality && vitality < 50) {
+  console.log('WARNING')
+} else if (50 <= vitality && vitality < 70) {
+  console.log('CAUTION')
+} else if (70 <= vitality && vitality <= 100) {
+  console.log('NOTICE')
+} else {
+  console.log('ERROR')
+}
+```
 
 ## 課題5の解答
+```javascript
+const anything = '文字列'
+
+if (typeof anything === 'string') {
+  console.log('anything is String')
+} else if (typeof anything === 'number' && !isNaN(anything)) {
+  console.log('anything is Number')
+} else if (Array.isArray(anything)) {
+  console.log('anything is Array')
+} else if (anything === null) {
+  console.log('anything is Null')
+} else {
+  console.log('anything is Error!')
+}
+```
 
 ## 課題6の解答
+解答例1
+```javascript
+const member = '森崎'
 
+if (member === '森崎') {
+  console.log('博之')
+} else if (member === '安田') {
+  console.log('顕')
+} else if (member === '戸次') {
+  console.log('重幸')
+} else if (member === '大泉') {
+  console.log('洋')
+} else if (member === '音尾') {
+  console.log('琢真')
+} else {
+  console.log('NOT TEAM NACS!')
+}
+```
+
+解答例2
+```javascript
+const member = '森崎'
+
+switch (member) {
+  case '森崎':
+    console.log('博之')
+    break
+  case '安田':
+    console.log('顕')
+    break
+  case '戸次':
+    console.log('重幸')
+    break
+  case '大泉':
+    console.log('洋')
+    break
+  case '音尾':
+    console.log('琢真')
+    break
+  default:
+    console.log('NOT TEAM NACS!')
+}
+```
 ## 課題7の解答
+```javascript
+const TEAM_NACS = ['森崎', '安田', '戸次', '大泉', '音尾']
+let concatNacs = ''
+
+for (let i = 0; i < TEAM_NACS.length; i++) {
+  if (i === TEAM_NACS.length - 1) {
+    concatNacs += TEAM_NACS[i]
+  } else {
+    concatNacs += TEAM_NACS[i] + '、'
+  }
+}
+console.log(concatNacs)
+```
 
 ## 課題8の解答
-
+```javascript
+for (let i = 1; i <= 30; i++) {
+  if (i % 3 === 0) {
+    console.log('アホになる！')
+  } else {
+    console.log(i)
+  }
+}
+```
 ## 課題9の解答
