@@ -171,3 +171,22 @@ kukuElement.forEach(parent => {
   console.log(row.join(" "));
 });
 ```
+
+解答例: forループのみで頑張るパターン   
+```javascript
+for(let i = 1; i <= 9; i++) {
+  // 1行分の結果を保持
+  let row = '';
+  for(let j = 1; j <= 9; j++) {
+    // 九九の演算
+    row += i * j;
+    // 結果表示を見やすくするための空白文字追加
+    row += ' ';
+  }
+  // 1行毎に結果を出力
+  console.log(row);
+
+  // 結果を1度初期化
+  row = '';
+}
+```
