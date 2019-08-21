@@ -159,3 +159,14 @@ for (let i = 1; i <= 30; i++) {
 }
 ```
 ## 課題9の解答
+
+```javascript
+const kukuElement = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+kukuElement.forEach(parent => {
+  const row = kukuElement.map(child => {
+    return parent * child;
+  });
+  console.log(row.join(" "));
+});
+```
