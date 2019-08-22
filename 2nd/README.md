@@ -70,3 +70,19 @@ if (condition) {
 上記以外の、オブジェクトを含むすべての値は、条件文に渡されると `true` に評価されます。
 
 参考: [制御フローとエラー処理 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+
+### Array#mapについて
+
+[Array.prototype.map() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+> map() メソッドは、与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。
+
+配列の要素を順番にコールバック関数へ渡し、コールバック関数が返した値から新しい入れる返すメソッドです。各要素を加工したいときに使います。
+
+```javascript
+const num = [1, 2, 3];
+const newNum = num.map((data) => {
+  return data * 10;
+});
+console.log(newNum) // [10, 20, 30]
+```
