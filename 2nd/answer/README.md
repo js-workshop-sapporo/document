@@ -165,11 +165,13 @@ switch (member) {
 }
 ```
 ## 課題7の解答
+解答例: forで回すパターン
 ```javascript
 const TEAM_NACS = ['森崎', '安田', '戸次', '大泉', '音尾']
 let concatNacs = ''
 
 for (let i = 0; i < TEAM_NACS.length; i++) {
+  // 配列の末尾の場合は句読点を付けない
   if (i === TEAM_NACS.length - 1) {
     concatNacs += TEAM_NACS[i]
   } else {
@@ -177,6 +179,13 @@ for (let i = 0; i < TEAM_NACS.length; i++) {
   }
 }
 console.log(concatNacs)
+```
+
+解答例: 配列のメソッドを使う（今回はifとforの会ですが例の一つとして…）
+```javascript
+const TEAM_NACS = ['森崎', '安田', '戸次', '大泉', '音尾']
+
+console.log(TEAM_NACS.join('、'))
 ```
 
 ## 課題8の解答
@@ -221,3 +230,11 @@ for(let i = 1; i <= 9; i++) {
   row = '';
 }
 ```
+
+解答例: 1回のforループで頑張るパターン
+```javascript
+for (let i = 1; i < 10; i++) {
+  // 九九の演算と 1行毎に結果を出力
+  console.log(i, i*2, i*3, i*4, i*5, i*6, i*7, i*8, i*9)
+}
+```   
