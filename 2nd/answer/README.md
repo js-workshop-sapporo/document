@@ -1,57 +1,88 @@
 ## 課題1の解答
 
+```javascript
+// myNameがマッチした場合
+const myName = '長澤';
+if ( '長澤' === myName ) {
+  console.log('my name is Nagasawa');
+}
+
+// myNameがマッチしない場合
+const myName = '関口';
+if ( '長澤' !== myName ) {
+  console.log('my name is not Nagasawa');
+}
+```
+
 ## 課題2の解答
+
+``` javascript
+const age = 19;
+if ( 19 <= age ) {
+  console.log('19歳のためお酒は呑めません。');
+} else {
+  console.log('20歳のためお酒が呑めます。');
+}
+```
 
 ## 課題3の解答
 
 ```javascript
 // 奥さんのお金
-const wifeMoney = 10000
+const wifeMoney = 10000;
 // 長澤くんが奥さんから借りたお金
-const nagasawaMoney = wifeMoney
+const nagasawaMoney = wifeMoney;
 // 懇親会の費用
-const socialGatheringMoney = 3500
-const gindakoMoney = 600
+const socialGatheringMoney = 3500;
+const gindakoMoney = 600;
 // 懇親会を支払ったときの残額
-const balance = nagasawaMoney - socialGatheringMoney
+const balance = nagasawaMoney - socialGatheringMoney;
 // 懇親会と銀だこを支払った時の残額
-const balanceGindako = nagasawaMoney - socialGatheringMoney - gindakoMoney
+const balanceGindako = nagasawaMoney - socialGatheringMoney - gindakoMoney;
 // 懐に入れた場合
-let checkFutokoro = false
+let checkFutokoro = false;
 // すべて返金した場合
-let checkAllMoney = true
+let checkAllMoney = true;
 // 帰りに銀だこを購入した場合
-let checkGindako = true
+let checkGindako = true;
 
 let nagasawaFutokoroMoney,
     nagasawaMoneyDebt,
-    wifeRefund
+    wifeRefund;
 
 if (checkFutokoro === true && checkGindako === false) {
   // 懐に入れたときの金額
-  nagasawaFutokoroMoney = nagasawaMoney - socialGatheringMoney
+  nagasawaFutokoroMoney = nagasawaMoney - socialGatheringMoney;
   // 長澤くんの借金
-  nagasawaMoneyDebt = nagasawaFutokoroMoney + socialGatheringMoney
+  nagasawaMoneyDebt = nagasawaFutokoroMoney + socialGatheringMoney;
   // 妻に返金した金額
-  wifeRefund = nagasawaMoney - socialGatheringMoney - nagasawaFutokoroMoney
+  wifeRefund = nagasawaMoney - socialGatheringMoney - nagasawaFutokoroMoney;
 } else if(checkAllMoney === true && checkGindako === false) {
   // 懐に入れたときの金額
-  nagasawaFutokoroMoney = nagasawaMoney - socialGatheringMoney - balance
+  nagasawaFutokoroMoney = nagasawaMoney - socialGatheringMoney - balance;
   // 長澤くんの借金
-  nagasawaMoneyDebt = nagasawaFutokoroMoney + socialGatheringMoney + balance
+  nagasawaMoneyDebt = nagasawaFutokoroMoney + socialGatheringMoney + balance;
   // 妻に返金した金額
   wifeRefund = balance
 } else if (checkAllMoney === true && checkGindako === true) {
   // 懐に入れたときの金額
-  nagasawaFutokoroMoney = nagasawaMoney - socialGatheringMoney - gindakoMoney - balanceGindako
+  nagasawaFutokoroMoney = nagasawaMoney - socialGatheringMoney - gindakoMoney - balanceGindako;
   // 長澤くんの借金
-  nagasawaMoneyDebt = nagasawaMoney
+  nagasawaMoneyDebt = nagasawaMoney;
   // 妻に返金した金額
-  wifeRefund = nagasawaMoney - socialGatheringMoney - gindakoMoney
+  wifeRefund = nagasawaMoney - socialGatheringMoney - gindakoMoney;
+} else {
+   // 例外処理
+   // 懐に入れたときの金額
+   nagasawaFutokoroMoney = 0;
+   // 長澤くんの借金
+   nagasawaMoneyDebt = 0;
+   // 妻に返金した金額
+   wifeRefund = 0;
 }
-console.log('長澤くんの懐のお金：' + nagasawaFutokoroMoney + '円')
-console.log('長澤くんの奥さんへの借金：-' + nagasawaMoneyDebt + '円')
-console.log('奥さんの戻ったお金：' + wifeRefund + '円')
+console.log('長澤くんの懐のお金：' + nagasawaFutokoroMoney + '円');
+console.log('長澤くんの奥さんへの借金：-' + nagasawaMoneyDebt + '円');
+console.log('奥さんの戻ったお金：' + wifeRefund + '円');
 ```
 
 ## 課題4の解答
@@ -134,11 +165,13 @@ switch (member) {
 }
 ```
 ## 課題7の解答
+解答例: forで回すパターン
 ```javascript
 const TEAM_NACS = ['森崎', '安田', '戸次', '大泉', '音尾']
 let concatNacs = ''
 
 for (let i = 0; i < TEAM_NACS.length; i++) {
+  // 配列の末尾の場合は句読点を付けない
   if (i === TEAM_NACS.length - 1) {
     concatNacs += TEAM_NACS[i]
   } else {
@@ -146,6 +179,13 @@ for (let i = 0; i < TEAM_NACS.length; i++) {
   }
 }
 console.log(concatNacs)
+```
+
+解答例: 配列のメソッドを使う（今回はifとforの会ですが例の一つとして…）
+```javascript
+const TEAM_NACS = ['森崎', '安田', '戸次', '大泉', '音尾']
+
+console.log(TEAM_NACS.join('、'))
 ```
 
 ## 課題8の解答
@@ -190,6 +230,14 @@ for(let i = 1; i <= 9; i++) {
   row = '';
 }
 ```
+
+解答例: 1回のforループで頑張るパターン
+```javascript
+for (let i = 1; i < 10; i++) {
+  // 九九の演算と 1行毎に結果を出力
+  console.log(i, i*2, i*3, i*4, i*5, i*6, i*7, i*8, i*9)
+}
+```   
 
 ## 課題10の解答
 解答例:
