@@ -238,3 +238,18 @@ for (let i = 1; i < 10; i++) {
   console.log(i, i*2, i*3, i*4, i*5, i*6, i*7, i*8, i*9)
 }
 ```   
+
+## 課題10の解答
+解答例:
+```javascript
+for(let i = 1; i <= 10; i++) {
+  let row = '';
+  for(let j = 1; j <= 10 -i; j++) {
+    row += ' ';
+  }
+  for(let k = 1; k <= i * 2 - 1; k++) {
+    row += '*';
+  }
+  console.log(row)
+}
+```
