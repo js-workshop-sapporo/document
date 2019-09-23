@@ -8,7 +8,7 @@ const new_x_members = [...x_members, 'HEATH', 'SUGIZO'];
 console.log(new_x_members);
 ```
 
-- [Array.prototype.concat() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [スプレッド構文 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ```javascript
 // スプレッド演算子を使わない例：concatを使って結合する
@@ -19,7 +19,7 @@ console.log(x_menbers)
 console.log(new_x_menbers)
 ```
 
-- [スプレッド構文 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+- [Array.prototype.concat() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 
 ## 課題2の解答
 
