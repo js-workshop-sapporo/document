@@ -71,3 +71,30 @@ const new_items = items.filter((value) => value % 3 === 0)
 console.log(items)
 console.log(new_items)
 ```
+
+### 課題5の解答
+
+課題2と4の応用です。  
+filterとmapを使用します。
+要素のチェックには `Array.prototype.indexOf()` を使用します。
+
+```javascript
+const city = [
+  { id: 1, pref_id: 1, name: '札幌市' },
+  { id: 2, pref_id: 1, name: '旭川市' },
+  { id: 3, pref_id: 2, name: '青森市' },
+  { id: 4, pref_id: 3, name: '盛岡市' },
+  { id: 5, pref_id: 4, name: '秋田市' }
+]
+
+const prefecture = [
+  { id: 1, name: '北海道' },
+  { id: 3, name: '岩手県' }
+]
+
+const filteredCity = city.filter(item => {
+  return prefecture.map(pref => pref.id).indexOf(item.pref_id) >= 0
+})
+
+console.log(filteredCity)
+```
