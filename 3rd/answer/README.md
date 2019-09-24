@@ -63,7 +63,21 @@ console.log('sortした配列 ' + sort_numbers)
 
 ### 課題4の解答
 
-filterメソッドを使用します。
+filter()メソッドを使用します。  
+引数として与えれた値を各配列要素に対して実行し新しい配列を生成します。  
+このメソッドは元の配列は変更しません。
+
+第2引数のオブジェクトも指定することができます。
+
+```javascript
+const items = 配列データ;
+// 第2引数にオブジェクトを指定する
+items.filter(コールバック, オブジェクト)
+```
+
+### 参考
+
+- [Array.prototype.filter() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
 ```javascript
 const items = [5, 2, 7, 8, 3, 1, 6, 8, 4]
