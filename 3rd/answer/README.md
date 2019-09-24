@@ -60,3 +60,14 @@ const sort_numbers = numbers.slice().sort((a, b) => a - b)
 console.log('元の配列 ' + numbers)
 console.log('sortした配列 ' + sort_numbers)
 ```
+
+### 課題4の解答
+
+filterメソッドを使用します。
+
+```javascript
+const items = [5, 2, 7, 8, 3, 1, 6, 8, 4]
+const new_items = items.filter((value) => value % 3 === 0)
+console.log(items)
+console.log(new_items)
+```
