@@ -112,3 +112,22 @@ const filteredCity = city.filter(item => {
 
 console.log(filteredCity)
 ```
+
+### 課題6の解答
+
+reduceを使用します。
+
+```javascript
+const cart = [
+  { id: 1, name: 'りんご', price: 80, count: 1 },
+  { id: 2, name: 'みかん', price: 40, count: 5 },
+  { id: 3, name: '梨', price: 150, count: 2 },
+  { id: 4, name: '桃', price: 198, count: 4 }
+]
+
+const result = cart.reduce((acc, current) => {
+  return acc + (current.price * current.count)
+}, 0)
+
+console.log(result)
+```

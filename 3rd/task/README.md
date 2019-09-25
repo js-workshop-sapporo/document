@@ -48,3 +48,17 @@ const prefecture = [
   { id: 3, name: '岩手県' }
 ];
 ```
+
+## 課題6
+
+以下の配列 `cart` から `price` の合計値を求めてください。  
+※消費税は加算しないものとします。
+
+```javascript
+const cart = [
+  { id: 1, name: 'りんご', price: 80, count: 1 },
+  { id: 2, name: 'みかん', price: 40, count: 5 },
+  { id: 3, name: '梨', price: 150, count: 2 },
+  { id: 4, name: '桃', price: 198, count: 4 }
+]
+```
