@@ -115,7 +115,8 @@ console.log(filteredCity)
 
 ### 課題6の解答
 
-`reduce` または `forEach` を使用します。
+`reduce` または `forEach` を使用します。  
+ただ、 `forEach` は引数に与えられた関数を配列の各要素に対して実行するためのメソッドなので、単一の値にしたい場合は `reduce` メソッドを使うのが理想かもしれません。
 
 #### reduce パターン
 ```javascript
