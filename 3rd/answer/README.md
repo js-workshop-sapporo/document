@@ -89,8 +89,12 @@ console.log(new_items)
 ### 課題5の解答
 
 課題2と4の応用です。  
-filterとmapを使用します。
+`Array.prototype.filter()` と `Array.prototype.map()` を使用します。
 要素のチェックには `Array.prototype.indexOf()` を使用します。
+2つの配列から相互で関係している値を元に新たな値を出力する事は実務でもよくあります。  
+この例だと `city` 配列内の `pref_id` が `prefecture` 配列の `id` と関係しています。
+
+- [Array.prototype.indexOf() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
 ```javascript
 const city = [
@@ -115,8 +119,11 @@ console.log(filteredCity)
 
 ### 課題6の解答
 
-`reduce` または `forEach` を使用します。  
+`Array.prototype.reduce()` または `Array.prototype.forEach()` を使用します。  
 ただ、 `forEach` は引数に与えられた関数を配列の各要素に対して実行するためのメソッドなので、単一の値にしたい場合は `reduce` メソッドを使うのが理想かもしれません。
+
+- [Array.prototype.reduce() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+- [Array.prototype.forEach() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
 #### reduce パターン
 ```javascript
@@ -127,8 +134,8 @@ const cart = [
   { id: 4, name: '桃', price: 198, count: 4 }
 ]
 
-const result = cart.reduce((acc, current) => {
-  return acc + (current.price * current.count)
+const result = cart.reduce((prev, current) => {
+  return prev + (current.price * current.count)
 }, 0)
 
 console.log(result)
@@ -149,4 +156,41 @@ cart.forEach(elem => {
 })
 
 console.log(result)
+```
+
+### 課題7の解答
+
+`Array.prototype.reduce()` と `Array.prototype.find()` を組み合わせて合計値を算出します。
+`cart` 配列の `tax_id` が `tax` 配列の `id` と関係しています。
+
+- [Array.prototype.find() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+
+```javascript
+const cart = [
+  { id: 1, name: 'ビール', price: 198, count: 2, tax_id: 2 },
+  { id: 2, name: 'ストロングゼロ', price: 100, count: 1, tax_id: 2 },
+  { id: 3, name: '豚肉', price: 212, count: 1, tax_id: 1 },
+  { id: 4, name: '玉ねぎ', price: 37, count: 2, tax_id: 1 },
+  { id: 5, name: 'おろし生姜', price: 90, count: 1, tax_id: 1 }
+]
+
+const tax = [
+  { id: 1, value: 1.08 }, // 消費税 8%
+  { id: 2, value: 1.1 }   // 消費税 10%
+]
+
+// デフォルトの税率（8%）
+const DEFAULT_TAX = 1.08
+
+const result = cart.reduce((prev, current) => {
+  // 商品に紐付いている tax_id から tax 配列の id を元に現在の商品の税率探す
+  const findTax = tax.find(item => item.id === current.tax_id)
+  // tax_id とマッチする id が tax配列に存在すればそのvalueを使用するがない場合はデフォルトを使用する
+  const currentTax = findTax ? findTax.value : DEFAULT_TAX
+  // (商品価格 * 税率) * 個数 を計算する
+  return prev + ((current.price * currentTax) * current.count)
+}, 0)
+
+// 計算結果を小数点を切り捨ててコンソールに表示する
+console.log(Math.floor(result))
 ```

@@ -62,3 +62,25 @@ const cart = [
   { id: 4, name: '桃', price: 198, count: 4 }
 ]
 ```
+
+## 課題7
+
+以下の配列 `cart` から `price` の消費税も含めた合計値を求めてください。  
+消費税は配列 `tax` を使用し、全商品の合計値の小数点は切り捨ててください。
+
+ヒント： 小数点切り捨ては `Math.floor(number)` で出来ます。
+
+```javascript
+const cart = [
+  { id: 1, name: 'ビール', price: 198, count: 2, tax_id: 2 },
+  { id: 2, name: 'ストロングゼロ', price: 100, count: 1, tax_id: 2 },
+  { id: 3, name: '豚肉', price: 212, count: 1, tax_id: 1 },
+  { id: 4, name: '玉ねぎ', price: 37, count: 2, tax_id: 1 },
+  { id: 5, name: 'おろし生姜', price: 90, count: 1, tax_id: 1 }
+]
+
+const tax = [
+  { id: 1, value: 1.08 },
+  { id: 2, value: 1.1 }
+]
+```
