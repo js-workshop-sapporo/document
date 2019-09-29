@@ -106,6 +106,3 @@ const cart = [
   { id: 5, name: 'ペットフード', price: 3250, tax: 10 },
 ]
 ```
-
-
->>>>>>> Stashed changes
