@@ -27,7 +27,7 @@ const numbers = [5, 6, 4, 2, 10, 44, 33, 30, 50, 1, 999, 79, 48, 66];
 以下の変数配列 `items` から3の倍数を絞り込みして、新しい `new_items` の変数配列を作ってください。
 
 ```javascript
-const items = [5,2,7,8,3,1,6,8,4];
+const items = [5, 2, 7, 8, 3, 1, 6, 8, 4];
 ```
 
 ## 課題5
@@ -60,7 +60,7 @@ const cart = [
   { id: 2, name: 'みかん', price: 40, count: 5 },
   { id: 3, name: '梨', price: 150, count: 2 },
   { id: 4, name: '桃', price: 198, count: 4 }
-]
+];
 ```
 
 ## 課題7
@@ -77,7 +77,7 @@ const cart = [
   { id: 3, name: '豚肉', price: 212, count: 1, tax_id: 1 },
   { id: 4, name: '玉ねぎ', price: 37, count: 2, tax_id: 1 },
   { id: 5, name: 'おろし生姜', price: 90, count: 1, tax_id: 1 }
-]
+];
 
 const tax = [
   { id: 1, value: 1.08 },
@@ -104,5 +104,5 @@ const cart = [
   { id: 3, name: '食料品', price: 3533, tax: 8 },
   { id: 4, name: '新聞定期購読', price: 4900, tax: 8 },
   { id: 5, name: 'ペットフード', price: 3250, tax: 10 },
-]
+];
 ```
