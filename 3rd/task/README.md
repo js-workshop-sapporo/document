@@ -106,3 +106,18 @@ const cart = [
   { id: 5, name: 'ペットフード', price: 3250, tax: 10 },
 ];
 ```
+
+## 課題9
+
+`countryLists` の配列（国）から `countryAreaLists` の配列を条件（エリアごと）に分けた（ `Asia、Europe、Africa、MiddleEast、Oceania` ）新しい変数オブジェクトを作ってください。
+
+```javascript
+const countryLists = ['日本', 'ロシア', 'アメリカ', 'フランス', 'ニュージーランド', 'エジプト', '中国', 'インド', 'サウジアラビア', 'カメルーン', 'イギリス'];
+const countryAreaLists = [
+  { area: 'アジア', countries: ['日本', '中国', 'インド'] },
+  { area: 'ヨーロッパ', countries: ['フランス', 'ロシア', 'イギリス'] },
+  { area: 'アフリカ', countries: ['カメルーン', 'エジプト'] },
+  { area: '中東', countries: ['サウジアラビア'] },
+  { area: 'オセアニア', countries: ['ニュージーランド'] }
+]
+```
