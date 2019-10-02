@@ -211,17 +211,17 @@ const cart = [
   { id: 3, name: '食料品', price: 3533, tax: 8 },
   { id: 4, name: '新聞定期購読', price: 4900, tax: 8 },
   { id: 5, name: 'ペットフード', price: 3250, tax: 10 }
-]
+];
 // 消費税の計算
 const reduceTax = (priceWithTax, taxRate) => {
-  const temp = Math.round(priceWithTax / (taxRate + 1))
-  const reverse = Math.round(temp * (taxRate + 1))
+  const temp = Math.round(priceWithTax / (taxRate + 1));
+  const reverse = Math.round(temp * (taxRate + 1));
   if (reverse === priceWithTax) {
-    return temp
+    return temp;
   } else if (reverse > priceWithTax) {
-    return temp - 1
+    return temp - 1;
   } else {
-    return temp + 1
+    return temp + 1;
   }
 };
 // 税抜価格を配列に格納
@@ -231,7 +231,7 @@ const excludedTax = cart.map((item) => {
 });
 // 税抜価格合計を求める
 const excludedTaxTotal = excludedTax.reduce((total, item) => {
-  return total + item
-})
-console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '円')
+  return total + item;
+});
+console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '円');
 ```
