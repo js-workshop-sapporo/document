@@ -194,3 +194,44 @@ const result = cart.reduce((prev, current) => {
 // 計算結果を小数点を切り捨ててコンソールに表示する
 console.log(Math.floor(result))
 ```
+
+## 課題8
+
+消費税の計算は式は以下になります。  
+[https://www.keigenzeiritsu.info/article/18882](https://www.keigenzeiritsu.info/article/18882)
+
+reduceTaxで、各データの税込み価格から消費税分を求めます。  
+excludedTaxで、税抜価格を求めます。  
+excludedTaxTotalで、reduceを使い配列の合計を求めます。
+
+```javascript
+const cart = [
+  { id: 1, name: '酒', price: 290, tax: 10 },
+  { id: 2, name: '水道代', price: 5867, tax: 10 },
+  { id: 3, name: '食料品', price: 3533, tax: 8 },
+  { id: 4, name: '新聞定期購読', price: 4900, tax: 8 },
+  { id: 5, name: 'ペットフード', price: 3250, tax: 10 }
+]
+// 消費税の計算
+const reduceTax = (priceWithTax, taxRate) => {
+  const temp = Math.round(priceWithTax / (taxRate + 1))
+  const reverse = Math.round(temp * (taxRate + 1))
+  if (reverse === priceWithTax) {
+    return temp
+  } else if (reverse > priceWithTax) {
+    return temp - 1
+  } else {
+    return temp + 1
+  }
+};
+// 税抜価格を配列に格納
+const excludedTax = cart.map((item) => {
+  const taxRate = Number(item.tax) / 100;
+  return reduceTax(item.price, taxRate);
+});
+// 税抜価格合計を求める
+const excludedTaxTotal = excludedTax.reduce((total, item) => {
+  return total + item
+})
+console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '円')
+```
