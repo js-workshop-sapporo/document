@@ -210,12 +210,15 @@ const cart = [
   { id: 2, name: '水道代', price: 5867, tax: 10 },
   { id: 3, name: '食料品', price: 3533, tax: 8 },
   { id: 4, name: '新聞定期購読', price: 4900, tax: 8 },
-  { id: 5, name: 'ペットフード', price: 3250, tax: 10 }
+  { id: 5, name: 'ペットフード', price: 3250, tax: 10 },
+  { id: 6, name: 'コーヒー', price: 225, tax: 8 }
 ];
 // 消費税の計算
 const reduceTax = (priceWithTax, taxRate) => {
+  // 本体価格 ＝ 税込み価格 /（1 + 税率）
   const temp = Math.round(priceWithTax / (taxRate + 1));
   const reverse = Math.round(temp * (taxRate + 1));
+  // 浮動小数点の計算：整数に対してプラスであれば切り上げ、マイナスなら切り捨て、イコールの場合はそのまま返す
   if (reverse === priceWithTax) {
     return temp;
   } else if (reverse > priceWithTax) {
@@ -226,7 +229,9 @@ const reduceTax = (priceWithTax, taxRate) => {
 };
 // 税抜価格を配列に格納
 const excludedTax = cart.map((item) => {
+  // cartのtaxは整数になるため、税率に変換
   const taxRate = Number(item.tax) / 100;
+  // 税抜価格の計算の値を返す
   return reduceTax(item.price, taxRate);
 });
 // 税抜価格合計を求める

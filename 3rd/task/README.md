@@ -119,5 +119,5 @@ const countryAreaLists = [
   { area: 'アフリカ', countries: ['カメルーン', 'エジプト'] },
   { area: '中東', countries: ['サウジアラビア'] },
   { area: 'オセアニア', countries: ['ニュージーランド'] }
-]
+];
 ```
