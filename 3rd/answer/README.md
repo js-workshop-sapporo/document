@@ -271,3 +271,54 @@ console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '�
 - [https://github.com/MikeMcl/decimal.js](https://github.com/MikeMcl/decimal.js)
 
 ### 課題9の解答
+
+```javascript
+const countryLists = ['日本', 'ロシア', 'アメリカ', 'フランス', 'ニュージーランド', 'エジプト', '中国', 'インド', 'サウジアラビア', 'カメルーン', 'イギリス'];
+const countryAreaLists = [
+  { area: 'アジア', countries: ['日本', '中国', 'インド'] },
+  { area: 'ヨーロッパ', countries: ['フランス', 'ロシア', 'イギリス'] },
+  { area: 'アメリカ', countries: ['アメリカ'] },
+  { area: 'アフリカ', countries: ['カメルーン', 'エジプト'] },
+  { area: '中東', countries: ['サウジアラビア'] },
+  { area: 'オセアニア', countries: ['ニュージーランド'] }
+];
+/**
+ * オブジェクト
+ */
+const countryListGroups = {
+  Asia: [],
+  Europe: [],
+  America: [],
+  Africa: [],
+  MiddleEast: [],
+  Oceania: []
+}
+countryLists.forEach((element, index) => {
+  const filtered = countryAreaLists.filter(item => {
+    return item.countries.indexOf(element) >= 0;
+  })
+  switch (filtered[0].area) {
+    case 'アジア':
+      countryListGroups.Asia.push(element)
+      break;
+    case 'ヨーロッパ':
+      countryListGroups.Europe.push(element)
+      break;
+    case 'アメリカ':
+      countryListGroups.America.push(element)
+      break;
+    case 'アフリカ':
+      countryListGroups.Africa.push(element)
+      break;
+    case '中東':
+      countryListGroups.MiddleEast.push(element)
+      break;
+    case 'オセアニア':
+      countryListGroups.Oceania.push(element)
+      break;
+    default:
+      break;
+  }
+})
+console.log(countryListGroups);
+```
