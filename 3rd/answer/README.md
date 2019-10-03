@@ -187,12 +187,12 @@ const result = cart.reduce((prev, current) => {
   const findTax = tax.find(item => item.id === current.tax_id);
   // tax_id とマッチする id が tax配列に存在すればそのvalueを使用するがない場合はデフォルトを使用する
   const currentTax = findTax ? findTax.value : DEFAULT_TAX;
-  // (商品価格 * 税率) * 個数 を計算する
-  return prev + ((current.price * currentTax) * current.count);
+  // 小数点を切り捨てた(商品価格 * 税率) * 個数 を計算する
+  return prev + ((Math.floor(current.price * currentTax)) * current.count);
 }, 0);
 
-// 計算結果を小数点を切り捨ててコンソールに表示する
-console.log(Math.floor(result));
+// コンソールに表示する
+console.log(result);
 ```
 
 ## 課題8の解答
