@@ -264,10 +264,9 @@ const excludedTaxTotal = excludedTax.reduce((total, item) => {
 console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '円');
 ```
 
-#### Tips
+### Tips
 
 ライブラリで対応させる方法もあります。
 
 - [https://github.com/MikeMcl/decimal.js](https://github.com/MikeMcl/decimal.js)
 
-### 課題9の解答
