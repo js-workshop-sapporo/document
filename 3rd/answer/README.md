@@ -211,6 +211,7 @@ JavaScriptの場合は、「整数の範囲内で計算」か「適当な単位�
 - [消費税の税込み価格、税抜き価格の計算方法は？端数はどうする？](https://www.keigenzeiritsu.info/article/18882)
 - [JavaScriptで小数点の誤差が発生する件の備忘録](https://qiita.com/Chinats/items/e2647ca7900dfe7835a8)
 - [IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754)
+- [JavaScriptの浮動小数点数型の誤差をなくす](https://confrage.jp/javascript%E3%81%AE%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0%E5%9E%8B%E3%81%AE%E8%AA%A4%E5%B7%AE%E3%82%92%E3%81%AA%E3%81%8F%E3%81%99/)
 
 ```javascript
 const cart = [
