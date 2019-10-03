@@ -197,12 +197,20 @@ console.log(Math.floor(result));
 
 ## 課題8
 
-消費税の計算は式は以下になります。  
-[https://www.keigenzeiritsu.info/article/18882](https://www.keigenzeiritsu.info/article/18882)
+JavaScriptの浮動小数型で計算（1.08や1.1）すると誤差が生じます。  
+JavaScriptなど多くの言語で浮動小数点数に [IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754) という形式を使用しています。この形式は2進法になっているので、1.08のような10進法では割り切れる小数でも [IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754) では正確に表せないことで発生します。  
+JavaScriptの場合は、「整数の範囲内で計算」か「適当な単位で丸め操作」が必要になります。
 
-reduceTaxで、各データの税込み価格から消費税分を求めます。  
-excludedTaxで、税抜価格を求めます。  
-excludedTaxTotalで、reduceを使い配列の合計を求めます。
+1. reduceTaxで、各データの再計算した税込み価格を求めて各データの比較から税抜価格を返す
+2. excludedTaxで、各データごとにreduceTaxを実行し税抜価格の配列を作成する
+3. excludedTaxTotalで、excludedTaxの配列の合計を求めます。（reduceを使います）
+
+### 参考
+- [JavaScriptで消費税を計算する](https://qiita.com/jkr_2255/items/0ca7bc536d930f83a901)
+- [浮動小数点数の正確な値を割り出す](https://qiita.com/jkr_2255/items/0321b411243daf549ffc)
+- [消費税の税込み価格、税抜き価格の計算方法は？端数はどうする？](https://www.keigenzeiritsu.info/article/18882)
+- [JavaScriptで小数点の誤差が発生する件の備忘録](https://qiita.com/Chinats/items/e2647ca7900dfe7835a8)
+- [IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754)
 
 ```javascript
 const cart = [
@@ -254,3 +262,9 @@ const excludedTaxTotal = excludedTax.reduce((total, item) => {
 // toLocaleString で三桁ごとにカンマをつける
 console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '円');
 ```
+
+### Tips
+
+ライブラリで対応させる方法もあります。
+
+- [https://github.com/MikeMcl/decimal.js](https://github.com/MikeMcl/decimal.js)

@@ -88,6 +88,9 @@ const tax = [
 
 ## 課題8
 
+消費税の計算は式は以下になります。  
+[https://www.keigenzeiritsu.info/article/18882](https://www.keigenzeiritsu.info/article/18882)
+
 以下の配列 `cart` から `price` は税込み価格になります。消費税8%と10%を組み合わせて税抜価格の合計値を求めてください。
 ※小数点は四捨五入する
 
@@ -99,11 +102,12 @@ const tax = [
 
 ```javascript
 const cart = [
-  { id: 1, name: '酒', price: 290, tax: 10 },
+  { id: 1, name: '酒', price: 126, tax: 10 },
   { id: 2, name: '水道代', price: 5867, tax: 10 },
   { id: 3, name: '食料品', price: 3533, tax: 8 },
   { id: 4, name: '新聞定期購読', price: 4900, tax: 8 },
   { id: 5, name: 'ペットフード', price: 3250, tax: 10 },
+  { id: 6, name: 'コーヒー', price: 225, tax: 8 }
 ];
 ```
 
