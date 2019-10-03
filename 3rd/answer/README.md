@@ -61,7 +61,7 @@ console.log('元の配列 ' + numbers);
 console.log('sortした配列 ' + sort_numbers);
 ```
 
-### 課題4の解答
+## 課題4の解答
 
 filter()メソッドを使用します。  
 引数として与えれた値を各配列要素に対して実行し新しい配列を生成します。  
@@ -86,7 +86,7 @@ console.log(items);
 console.log(new_items);
 ```
 
-### 課題5の解答
+## 課題5の解答
 
 課題2と4の応用です。  
 `Array.prototype.filter()` と `Array.prototype.map()` を使用します。
@@ -117,7 +117,7 @@ const filteredCity = city.filter(item => {
 console.log(filteredCity);
 ```
 
-### 課題6の解答
+## 課題6の解答
 
 `Array.prototype.reduce()` または `Array.prototype.forEach()` を使用します。  
 ただ、 `forEach` は引数に与えられた関数を配列の各要素に対して実行するためのメソッドなので、単一の値にしたい場合は `reduce` メソッドを使うのが理想かもしれません。
@@ -125,7 +125,7 @@ console.log(filteredCity);
 - [Array.prototype.reduce() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 - [Array.prototype.forEach() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
-#### reduce パターン
+### reduce パターン
 ```javascript
 const cart = [
   { id: 1, name: 'りんご', price: 80, count: 1 },
@@ -141,7 +141,7 @@ const result = cart.reduce((prev, current) => {
 console.log(result)
 ```
 
-#### forEach パターン
+### forEach パターン
 ```javascript
 const cart = [
   { id: 1, name: 'りんご', price: 80, count: 1 },
@@ -158,7 +158,7 @@ cart.forEach(elem => {
 console.log(result)
 ```
 
-### 課題7の解答
+## 課題7の解答
 
 `Array.prototype.reduce()` と `Array.prototype.find()` を組み合わせて合計値を算出します。
 `cart` 配列の `tax_id` が `tax` 配列の `id` と関係しています。
@@ -195,7 +195,7 @@ const result = cart.reduce((prev, current) => {
 console.log(Math.floor(result));
 ```
 
-## 課題8
+## 課題8の解答
 
 JavaScriptの浮動小数型で計算（1.08や1.1）すると誤差が生じます。  
 JavaScriptなど多くの言語で浮動小数点数に [IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754) という形式を使用しています。この形式は2進法になっているので、1.08のような10進法では割り切れる小数でも [IEEE 754](https://ja.wikipedia.org/wiki/IEEE_754) では正確に表せないことで発生します。  
@@ -264,8 +264,10 @@ const excludedTaxTotal = excludedTax.reduce((total, item) => {
 console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '円');
 ```
 
-### Tips
+#### Tips
 
 ライブラリで対応させる方法もあります。
 
 - [https://github.com/MikeMcl/decimal.js](https://github.com/MikeMcl/decimal.js)
+
+### 課題9の解答
