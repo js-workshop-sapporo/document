@@ -264,7 +264,7 @@ const excludedTaxTotal = excludedTax.reduce((total, item) => {
 console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '円');
 ```
 
-#### Tips
+### Tips
 
 ライブラリで対応させる方法もあります。
 
