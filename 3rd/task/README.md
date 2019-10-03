@@ -85,7 +85,6 @@ const tax = [
 ]
 ```
 
-
 ## 課題8
 
 消費税の計算は式は以下になります。  
@@ -108,5 +107,31 @@ const cart = [
   { id: 4, name: '新聞定期購読', price: 4900, tax: 8 },
   { id: 5, name: 'ペットフード', price: 3250, tax: 10 },
   { id: 6, name: 'コーヒー', price: 225, tax: 8 }
+];
+```
+
+## 課題9
+
+`countryLists` の配列（国）から `countryAreaLists` の配列を条件（エリアごと）を参照して、各国が所属するエリアに格納された形で `countryListGroups` という変数オブジェクトを作成してください。（ `Asia、Europe、Africa、MiddleEast、Oceania` ）
+
+```javascript
+// 出力結果 console.log(countryListGroups)
+{
+  Asia: ['日本', '中国', 'インド'],
+  Europe: ['ロシア', 'フランス', 'イギリス'],
+  Africa: ['カメルーン', 'エジプト'],
+  MiddleEast: ['サウジアラビア'],
+  Oceania: ['ニュージーランド']
+}
+```
+
+```javascript
+const countryLists = ['日本', 'ロシア', 'アメリカ', 'フランス', 'ニュージーランド', 'エジプト', '中国', 'インド', 'サウジアラビア', 'カメルーン', 'イギリス'];
+const countryAreaLists = [
+  { area: 'アジア', countries: ['日本', '中国', 'インド'] },
+  { area: 'ヨーロッパ', countries: ['フランス', 'ロシア', 'イギリス'] },
+  { area: 'アフリカ', countries: ['カメルーン', 'エジプト'] },
+  { area: '中東', countries: ['サウジアラビア'] },
+  { area: 'オセアニア', countries: ['ニュージーランド'] }
 ];
 ```

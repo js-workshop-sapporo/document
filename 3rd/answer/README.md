@@ -270,7 +270,7 @@ console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '�
 
 - [https://github.com/MikeMcl/decimal.js](https://github.com/MikeMcl/decimal.js)
 
-### 課題9の解答
+## 課題9の解答
 
 ```javascript
 const countryLists = ['日本', 'ロシア', 'アメリカ', 'フランス', 'ニュージーランド', 'エジプト', '中国', 'インド', 'サウジアラビア', 'カメルーン', 'イギリス'];
