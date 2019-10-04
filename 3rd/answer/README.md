@@ -314,22 +314,22 @@ countryLists.forEach((element) => {
   // フィルタリングの条件にあったエリアに国を追加
   switch (filtered[0].area) {
     case 'アジア':
-      countryListGroups.Asia.push(element)
+      countryListGroups.Asia.push(element);
       break;
     case 'ヨーロッパ':
-      countryListGroups.Europe.push(element)
+      countryListGroups.Europe.push(element);
       break;
     case 'アメリカ':
-      countryListGroups.America.push(element)
+      countryListGroups.America.push(element);
       break;
     case 'アフリカ':
-      countryListGroups.Africa.push(element)
+      countryListGroups.Africa.push(element);
       break;
     case '中東':
-      countryListGroups.MiddleEast.push(element)
+      countryListGroups.MiddleEast.push(element);
       break;
     case 'オセアニア':
-      countryListGroups.Oceania.push(element)
+      countryListGroups.Oceania.push(element);
       break;
     default:
       break;
