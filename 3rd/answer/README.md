@@ -272,6 +272,15 @@ console.log('税抜価格の合計： ' + excludedTaxTotal.toLocaleString() + '�
 
 ## 課題9の解答
 
+課題5とほぼ同じ内容になりますが、最後にフィルタリングした値を元に `countryListGroups` の値に追加していきます。
+
+forEachとfilterとpushと前回勉強したswitch構文を組み合わせて実装します。
+
+1. 追加先のオブジェクトを定義
+2. `countryLists` を `forEach` で回す
+3. フィルタリングした結果は `filtered` へ代入
+4. `filtered` の値を元に `switch` 構文で条件マッチしたエリアに `countryListGroups.XXXX` へ `push` します。
+
 ```javascript
 const countryLists = ['日本', 'ロシア', 'アメリカ', 'フランス', 'ニュージーランド', 'エジプト', '中国', 'インド', 'サウジアラビア', 'カメルーン', 'イギリス'];
 const countryAreaLists = [
@@ -283,7 +292,7 @@ const countryAreaLists = [
   { area: 'オセアニア', countries: ['ニュージーランド'] }
 ];
 /**
- * オブジェクト
+ * 追加先のオブジェクトを定義
  */
 const countryListGroups = {
   Asia: [],
@@ -293,10 +302,16 @@ const countryListGroups = {
   MiddleEast: [],
   Oceania: []
 }
-countryLists.forEach((element, index) => {
+/**
+ * エリアに属している国をエリアごとの配列に追加
+ * @param  {String} (element
+ */
+countryLists.forEach((element) => {
+  // element（国）が属してるエリアをフィルタリング
   const filtered = countryAreaLists.filter(item => {
     return item.countries.indexOf(element) >= 0;
   })
+  // フィルタリングの条件にあったエリアに国を追加
   switch (filtered[0].area) {
     case 'アジア':
       countryListGroups.Asia.push(element)
