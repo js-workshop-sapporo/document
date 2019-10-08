@@ -337,3 +337,71 @@ countryLists.forEach((element) => {
 })
 console.log(countryListGroups);
 ```
+
+## 課題10の解答
+
+array.reverse()を利用し、配列の要素を逆順に出来ます。  
+
+### 参考
+
+- [Array.prototype.reverse() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+
+```javascript
+const array = [1, 2, 3, 4, 5, 6, 7];
+const reverseArray = array.reverse();
+
+console.log(reverseArray);
+```
+
+### TIPS
+`reverse()` メソッドは元の配列（回答例の `array` 変数）を上書きしてしまいます。
+
+```javascript
+const array = [1, 2, 3, 4, 5, 6, 7];
+console.log(array); // → [1, 2, 3, 4, 5, 6, 7]
+const reverseArray = array.reverse();
+
+console.log(array); // → [7, 6, 5, 4, 3, 2, 1]
+```
+
+## 課題12の解答
+
+array.flat()を利用し、ネスト化された配列を平滑化することが出来ます。  
+
+### 参考
+
+- [Array.prototype.flat() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
+
+```javascript
+const array = [[1, 2, 3], [4, 5], [6, 7]];
+const flatArray = array.flat();
+
+console.log(flatArray);
+```
+
+### TIPS
+`flat()` メソッドは、`ES2019` で追加されたメソッドなので、対応ブラウザ等に注意が必要
+
+- [Array.prototype.flat() - JavaScript | MDN 対応状況](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat#Browser_compatibility)
+
+## 課題12の解答
+
+課題11、課題10の内容の応用
+
+1. ネストされた配列を平滑化
+1. 平滑化後の配列を逆順に反転　(反転処理を `reduceRight` を利用している)
+
+回答例はメソッドチェーンを利用した例であるが、処理毎に変数に代入しても可
+
+### 参考
+
+- [Array.prototype.reduceRight() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight)
+
+```javascript
+const array = [[1, 2, 3], [4, 5], [6, 7]];
+const reverseArray = array.flat().reduceRight( (accumulator, currentValue) => {
+  return accumulator.concat(currentValue)
+}, []);
+
+console.log(reverseArray);
+```
