@@ -67,6 +67,8 @@ console.log('numbers:', numbers); // => [1, 0, 3, 4, 2]
 console.log('sortedNumbers:', sortedNumbers); // => [0, 1, 2, 3, 4]
 ```
 
-## オブジェクトの操作
+## オブジェクトについて
 
-## リテラル
+- [JavaScript オブジェクトの基本](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics)
+
+オブジェクトの基本についてはMDNを参照してください。
