@@ -364,7 +364,7 @@ const reverseArray = array.reverse();
 console.log(array); // → [7, 6, 5, 4, 3, 2, 1]
 ```
 
-## 課題12の解答
+## 課題11の解答
 
 array.flat()を利用し、ネスト化された配列を平滑化することが出来ます。  
 
