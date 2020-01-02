@@ -78,4 +78,60 @@ console.log(hello('長澤'))
 
 他のプログラミング言語によっては最後に評価された値が返される言語もありますが、JavaScriptの場合は `return` を省略した場合、常に未定義（`undefined`）が返されます。
 
+## 関数の定義方法
 
+大きく分けて次の4つがあります。
+
+1. 関数宣言文による定義
+1. 関数リテラルによる定義
+1. Functionコンストラクタによる定義
+1. アロー関数式による定義
+
+### 関数宣言文による定義
+
+「戻り値」のセクションのサンプルコードで記載しましたが、関数を定義するのに最も基本となる方法です。
+
+```javascript
+function sampleFunc(name) {
+  return 'おはようございます ' + name + 'さん'
+}
+console.log(sampleFunc('関口')); // おはようございます 関口さん 
+```
+
+### 関数リテラルによる定義
+
+JavaScriptでは関数はデータ型の一種のため、文字列や数値と同じく、変数に代入して使うことも可能です。
+
+```javascript
+const sampleFunc = function(name) {
+  return 'こんばんは ' + name + 'さん'
+}
+console.log(sampleFunc('日下')); // こんばんは 日下さん
+```
+
+### Functionコンストラクタによる定義
+
+JavaScriptでは組み込みオブジェクトとしてFunctionオブジェクトを用意していますが、正直な話、実務でFunctionコンストラクタを使って関数を定義したことはありません。
+
+次に掲載するサンプルコードをご覧いただけるとなんとなく察していただけるかと思いますが、コードの見通しがよろしくないので特別な事情がない限りFunctionコンストラクタによる定義はしないほうが良いと思います。
+
+```javascript
+const sampleFunc = new Function('name', 'return "いただきます" + name + "さん"');
+console.log(sampleFunc('長谷川')); // いただきます 長谷川さん
+```
+
+### アロー関数式による定義
+
+基本的には関数リテラルによる定義と同じですが、よりシンプルに書けます。
+
+コードが1文で収まる場合では更にシンプルに書けます。
+
+```javascript
+const sampleFunc = (name, price) => {
+  return name + 'はお金を' + price + '円借りました。';
+};
+console.log(sampleFunc('長澤', 1000)); // 長澤はお金を1000円借りました。
+
+const simpleSampleFunc = (name, price) => name + 'はお金を' + price + '円借りました。';
+console.log(simpleSampleFunc('長澤', 10000)); // 長澤はお金を10000円借りました。
+```
