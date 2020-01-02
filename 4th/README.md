@@ -55,3 +55,27 @@ getTriangle(5, 2); // 結果：5
 ```
 
 ### 戻り値（return）とは？
+
+関数内で処理をした結果を「戻り値」として返すことができます。  
+`return` を使わずに実行した場合、そのまま終了します。
+
+```javascript
+function hello(name) {
+  return 'こんにちわ ' + name + 'さん'
+}
+console.log(hello('長澤'))
+// 結果：こんにちは、長澤さん
+```
+
+```javascript
+// returnなし
+function hello(name) {
+  'こんにちわ ' + name + 'さん'
+}
+console.log(hello('長澤'))
+// 結果：undefined
+```
+
+他のプログラミング言語によっては最後に評価された値が返される言語もありますが、JavaScriptの場合は常に未定義が返されます。
+
+
