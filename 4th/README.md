@@ -14,13 +14,13 @@
     1. 関数リテラルによる定義
     1. Functionコンストラクタによる定義
     1. アロー関数式による定義
-1. 入れ子の関数
-1. 即時関数について
 1. 関数定義における注意点
    1. return命令の直後で改行しない
    1. 関数はデータ型の一種
    1. function命令は静的な構造を宣言する
    1. 関数リテラル/Functionコンストラクターは実行時に評価される
+1. 入れ子の関数
+1. 無名関数・即時関数について
 1. 無名関数
 1. 再帰関数
 1. 高階関数
@@ -138,6 +138,14 @@ const simpleSampleFunc = (name, price) => name + 'はお金を' + price + '円�
 console.log(simpleSampleFunc('長澤', 10000)); // 長澤はお金を10000円借りました。
 ```
 
+## 関数定義における注意点
+
+関数定義の注意点についての説明をします。
+
+## 無名関数・即時関数について
+
+即時関数と無名関数について
+
 ## 入れ子の関数
 
 関数の内部に関数を定義することを入れ子にすることができます。  
@@ -163,7 +171,7 @@ function funcA(){
   return num;
 }
 const value = funcA();
-console.log( value );
+console.log( value );  // 1
 ```
 
 以下のコードは、 `funcA` の `return` に `funcB` を実行され `funcB` に `return` を加えたコードになります。  
@@ -183,11 +191,12 @@ function funcA(){
   return funcB();
 }
 const value = funcA();
-console.log( value );
+console.log( value );  // 1
 ```
 
 以下のコードは、関数 `funcA` の `return` で 関数 `funcB` 自体を返すコードになります。（上記のコードは 関数 `funcB` の実行結果）  
-関数 `funcB` 自体を `return` することで変数 `value` も関数になるため、変数 `value` を実行することで 関数 `funcB` が実行されて結果 `num` が `return` されることになります。
+関数 `funcB` 自体を `return` することで変数 `value` も関数になるため、変数 `value` を実行することで 関数 `funcB` が実行されて結果 `num` が `return` されることになります。  
+これがクロージャーになります。
 
 ```javascript
 function funcA(){
@@ -199,7 +208,8 @@ function funcA(){
   return funcB;
 }
 const value = funcA();
-console.log( value );
+console.log( value );  // 1
+console.log( value );  // 2
 ```
 
 関数内の変数のスコープが入れ子関数の規則についてはクロージャの本質的な役割を果たしますので、最後の `クロージャーについて` で説明します。
