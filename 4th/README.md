@@ -21,7 +21,6 @@
    1. 関数リテラル/Functionコンストラクターは実行時に評価される
 1. 入れ子の関数
 1. 無名関数・即時関数について
-1. 無名関数
 1. 再帰関数
 1. 高階関数
 1. コールバック関数
@@ -52,6 +51,92 @@ function getTriangle(base, height) {
   return base * height / 2;
 }
 getTriangle(5, 2); // 結果：5
+```
+
+#### 引数の省略
+
+関数を呼び出すときの実引数を省略できます。逆に関数定義式の仮引数よりも多い数の実引数を指定して関数を実行することができます。  
+関数定義式の仮引数よりも少ない数の実引数を指定して関数を実行すると、実引数が省略された仮引数（`undefined`）が渡されます。
+
+```javascript
+function f(x, y) {
+  console.log('x = ' + x + ' y = ' + y);
+}
+f(2);  // x = 2 y = undefined
+```
+
+この性質を利用して、省略可能な関数を定義することができます。  
+そのためには、引数を省略した場合の初期値を設定しておく必要があります。
+
+```javascript
+function f(a, b) {
+  b = b || 1;
+  return a * b;
+}
+f(2, 3) // 6
+f(2);  // 2
+```
+
+`b = b || 1;` で論理和演算子で、左のオペランドが `true` と評価されるときは左のオペランドを返して、 `false` だった場合は →のオペランドを返します。  
+`b` に値が入ってない場合は、 `undefined` で `false` と評価されるため `b` は `1` となります。
+
+#### 可変長引数リスト
+
+すべての関数で利用可能なローカル変数として `arguments` があります。  
+`arguments` は `Arguments` オブジェクトを値として持っています。  
+関数n個の実非数を指定して呼び出されたとすると実引数の値が `arguments` に可能されます。
+
+- `arguments[0]` 1番目の実引数の値
+- `arguments[1]` 2番目の実引数の値
+- `arguments[n]` N番目の実引数の値
+
+`Arguments` オブジェクトはlengthとcalleeの2つのプロパティを持っているため以下の値が格納されます。
+
+- `arguments.length` 実引数の数
+- `arguments.callee` 現在実行されている関数への参照
+
+```javascript
+function f(x, y) {
+  arguments[1] = 3
+  console.log('x = ' + x,  'y = ' + y)
+}
+f(1,2)  // x = 1, y = 3
+```
+
+上記のコードでは、 `arguments[1]` を変更することで関数の仮引数 `y` の値も変更されます。  
+`arguments` 変数を使うと、引数の数が決まっていない可変長引数を定義できます。
+
+#### 名前付き引数
+
+ES2015から、分割代入を利用することで名前付き引数をよりわかりやすく記述することができます。
+
+```javascript
+function getTriangle({ base = 1, height = 1}) {
+  return base * height / 2;
+}
+console.log( getTriangle({base:5, height:4}) )  // 10
+```
+
+#### 「...」演算子による引数の展開
+
+「...」演算子は、実引数で利用することで配列を個々の値に展開できます。（正確には `for ... of` ブロックで処理できるオブジェクト）
+
+```javascript
+console.log(Math.max(15, -3, 78, 1));  // 結果 78
+console.log(Math.max([15, -3, 78, 1]));  // 結果 NaN
+```
+
+Math.maxメソッドは可変長引数を受け取るので最初のコードは最大値を求めることができるが最後の配列にした場合は、NaNになります。  
+ES2015以前は、applyメソッドを利用する必要がありました。
+
+```javascript
+console.log(Math.max.apply(null,  [15, -3, 78, 1])); // 結果 78
+```
+
+ES2015からは「...」演算子を利用することができるので下記のように記述することができます。
+
+```javascript
+console.log(Math.max(...[15, -3, 78, 1]));  // 結果 78
 ```
 
 ### 戻り値（return）とは？
