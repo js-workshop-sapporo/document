@@ -56,6 +56,8 @@ getTriangle(5, 2); // 結果：5
 
 ### 戻り値（return）とは？
 
+- [関数の戻り値](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
+
 関数内で処理をした結果を「戻り値」として返すことができます。  
 `return` を使わずに実行した場合、そのまま終了します。
 
@@ -135,3 +137,69 @@ console.log(sampleFunc('長澤', 1000)); // 長澤はお金を1000円借りま�
 const simpleSampleFunc = (name, price) => name + 'はお金を' + price + '円借りました。';
 console.log(simpleSampleFunc('長澤', 10000)); // 長澤はお金を10000円借りました。
 ```
+
+## 入れ子の関数
+
+関数の内部に関数を定義することを入れ子にすることができます。  
+入れ子の関数のことをローカル関数ととも呼びます。
+
+入れ子の関数（ローカル関数）は外側の関数のローカル変数として格納されるため、外からアクセスすることはできません。  
+また、外側の関数の引数やローカル変数にアクセスできます。
+
+以下のコードは `funcA` の中に関数 `funcB` が定義されています。  
+この形を入れ子の関数と呼びます。
+
+`value` 変数に `funcA` の実行結果を代入していますが、 変数 `num` を `return` しています。  
+`num` の初期値は `0` ですが、 `return` する前に `funcB` でインクリメントしているため `value` は `1` と返ってきます。  
+関数 `funcB` の外で定義している変数 `num` を参照できるということになります。
+
+```javascript
+function funcA(){
+  let num = 0;
+  function funcB(){
+    num++;
+  }
+  funcB();
+  return num;
+}
+const value = funcA();
+console.log( value );
+```
+
+以下のコードは、 `funcA` の `return` に `funcB` を実行され `funcB` に `return` を加えたコードになります。  
+
+- 関数 `funcA` の `return` で 関数 `funcB` が実行
+- 関数 `funcB` で インクルメントした `num` を `return` される
+- 変数 `value` には 関数 `funcA` の実行結果が代入されるため `1` になる
+
+
+```javascript
+function funcA(){
+  let num = 0;
+  function funcB(){
+    num++;
+    return num;
+  }
+  return funcB();
+}
+const value = funcA();
+console.log( value );
+```
+
+以下のコードは、関数 `funcA` の `return` で 関数 `funcB` 自体を返すコードになります。（上記のコードは 関数 `funcB` の実行結果）  
+関数 `funcB` 自体を `return` することで変数 `value` も関数になるため、変数 `value` を実行することで 関数 `funcB` が実行されて結果 `num` が `return` されることになります。
+
+```javascript
+function funcA(){
+  let num = 0;
+  function funcB(){
+    num++;
+    return num;
+  }
+  return funcB;
+}
+const value = funcA();
+console.log( value );
+```
+
+関数内の変数のスコープが入れ子関数の規則についてはクロージャの本質的な役割を果たします果たします。
