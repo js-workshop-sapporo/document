@@ -19,7 +19,8 @@ getMessage('Welcome 関数');
 function getCount() {
   let num = 0;
   function count() {
-    return num++;
+    num++;
+    return num;
   }
   return count;
 }
