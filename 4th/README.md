@@ -296,7 +296,7 @@ console.log(getTriangle);  // 文字列として出力される
 function命令によるよる関数定義は「関数リテラルを代入演算子（=）で変数を代入すること」とは異なる点にも注意が必要です。
 
 ```javascript
-console.log('三角形の面積：' + getTriangle(5, 2));  ※1
+console.log('三角形の面積：' + getTriangle(5, 2)); // ※1
 function getTriangle(base, height) {
   return base * height / 2;
 }
@@ -308,8 +308,27 @@ function getTriangle(base, height) {
 functionが動的に実行される命令ではなく、静的な構造を宣言するためのキーワードになるからです。  
  **「function命令はコードを解析・コンパイルするタイミングで関数を登録している」 ことになるため、実行時にはコード内の構造の一部として `getTriangle` 関数をどこからでも呼び出すことができることになります。**
 
+#### Note
+
+関数を定義した `<script>要素` は、呼び出し側の スクリプトブロックより前・同じスクリプトブロックに記述されなければなりません。  
+ブラウザの場合は、 `<script>要素` 単位で順に処理していくためです。
+
 ### 関数リテラル/Functionコンストラクターは実行時に評価される
 
+function命令から関数リテラルに置き換えた場合は、同様の動きは出来ません。  
+また、`Function` コンストラクターでも同様です。
+
+```javascript
+console.log('三角形の面積：' + getTriangle(5, 2)); // ※1
+const getTriangle = function(base, height) {
+  return base * height / 2;
+}
+```
+
+- **関数リテラル/Functionコンストラクターは実行時（代入時）に評価される**
+
+関数リテラル/Functionコンストラクターで記述するときは、**呼び出し元コードよりも先に記述する**必要があります。  
+記述の仕方で解釈が異なりますので、注意してください。
 
 ## 無名関数・即時関数について
 
