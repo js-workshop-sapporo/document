@@ -262,11 +262,51 @@ return base * height / 2;
 - throw 命令
 - `++`、 `--` 演算子（後置）
 
+JavaScriptでは文の途中で改行できますが、無制限に改行するべきではありません。  
+演算子、カンマ、左カッコの直後など、文の継続が明らかな部分のみ改行をするべきです。
+
 ### 関数はデータ型の一種
 
+関数と同盟の変数を定義していることから、`getTriangle = 0;` でエラーとなるはずですが、関数はデータ型の一種になるため以下はJavaScriptでは正しいコードになります。  
+そのため `getTriangle` の関数を定義するときは、 `getTriangle` という変数に関数型のリテラルを格納すると同じことになるため、変数 `getTriangle` に改めて数値型をセットしても間違いではありません。
+
+```javascript
+let getTriangle = function(base, height) {
+  return base * height / 2;
+};
+console.log(getTriangle(5, 2));  // 結果：5
+getTriangle = 0;
+console.log(getTriangle);
+```
+
+この性質から以下のコードを記述することもできます。  
+`getTriangle` を変数として参照しているので、 `getTriangle` に格納された関数定義がそのまま文字列として出力されます。 ※正確にはFunctionオブジェクトのtoStringメソッドが呼び出されるため文字列表現に変換されコンソールに表示されています。
+
+関数を呼び出す際に「引数がなくても丸カッコが省略できない」理由でもありますので、丸カッコは「関数を実行する」意味を持ちます。
+
+```javascript
+let getTriangle = function(base, height) {
+  return base * height / 2;
+};
+console.log(getTriangle);  // 文字列として出力される
+```
 
 ### function命令は静的な構造を宣言する
 
+function命令によるよる関数定義は「関数リテラルを代入演算子（=）で変数を代入すること」とは異なる点にも注意が必要です。
+
+```javascript
+console.log('三角形の面積：' + getTriangle(5, 2));  ※1
+function getTriangle(base, height) {
+  return base * height / 2;
+}
+```
+
+「関数定義が変数定義である」と考えると `※1` はエラーにならなければなりません。  
+`※1` 時点では `getTriangle` 関数は宣言されていないはずだからです。（関数定義を格納した変数 `getTriangle` ）
+実際にコンソールで確認すると正しく `getTriangle` 関数は実行されます。  
+functionが動的に実行される命令ではなく、静的な構造を宣言するためのキーワードになるからです。  
+** 「function命令はコードを解析・コンパイルするタイミングで関数を登録している」 ことになるため、実行時にはコード内の構造の一部として `getTriangle` 関数をどこからでも呼び出すことができることになります。**
 
 ### 関数リテラル/Functionコンストラクターは実行時に評価される
 
