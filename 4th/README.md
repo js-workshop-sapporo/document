@@ -370,7 +370,32 @@ innerFunc(5); // 未定義エラーが発生する
 
 ## 高階関数
 
-高階関数についての説明
+JavaScriptは第一級関数をサポートしているため、関数の引数に関数を受け取ることができます。
+
+引数として受け取った関数を扱う関数を高階関数と呼びます。
+
+次のコードの場合、第2引数で関数を受け取るので `mockForEach` が高階関数となります。
+
+第1引数に配列を受け取り、 `for in` 文で回して第2引数で受け取った関数を実行していきます。
+
+第2引数に渡した関数は引数で受け取った値をログに出すという至極シンプルな処理です。
+
+```javascript
+function mockForEach(array, func) {
+  for (let key in array) {
+    func(array[key])
+  }
+}
+
+// 引数に渡された
+function showArrayValue(value) {
+  console.log(value);
+}
+
+const fruits = ['蜜柑','葡萄', '林檎'];
+
+mockForEach(fruits, showArrayValue); // '蜜柑','葡萄', '林檎'
+```
 
 ## コールバック関数
 
