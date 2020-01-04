@@ -351,12 +351,19 @@ console.log( value() );  // 2
 
 ただし、無限ループにならないよう終了条件を書く必要があることに注意してください。
 
+次のコードは引数に渡した数値を0になるまでカウントダウンしていく関数です。
+
+変数 `recursiveFunc` に代入した関数 `innerFunc` が終了条件を満たすまで、処理を行いながら自分自身を返し続けます。
+
+※ `innerFunc` はローカル関数扱いとなり外部から呼び出すことはできません
+
 ```javascript
 const recursiveFunc = function innerFunc(num) {
   console.log(num);
   num--;
-  if (num < 0) return false;
+  if (num < 0) return false;  // 終了条件を満たした場合は再帰を終了する
   return innerFunc(num);
 }
-recursiveFunc(10);
+recursiveFunc(10);  // 10,9,8,7,6,5,4,3,2,1,0
+innerFunc(5); // 未定義エラーが発生する
 ```
