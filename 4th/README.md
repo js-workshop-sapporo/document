@@ -342,3 +342,21 @@ console.log( value() );  // 2
 ```
 
 関数内の変数のスコープが入れ子関数の規則についてはクロージャの本質的な役割を果たしますので、最後の `クロージャーについて` で説明します。
+
+## 再帰関数
+
+自分自身を呼び出す関数のことです。
+
+同じような手続きを何度も呼び出すような処理をコンパクトに書けます。
+
+ただし、無限ループにならないよう終了条件を書く必要があることに注意してください。
+
+```javascript
+const recursiveFunc = function innerFunc(num) {
+  console.log(num);
+  num--;
+  if (num < 0) return false;
+  return innerFunc(num);
+}
+recursiveFunc(10);
+```
