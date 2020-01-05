@@ -11,7 +11,6 @@ getMessage('Welcome 関数');
 
 ## 課題2
 ## 課題3
-## 課題4
 
 `console.log` で関数を実行するたびにカウントアップする関数を作ってください。
 
@@ -27,6 +26,22 @@ function getCount() {
 const value = getCount()
 console.log( value() );  // 1
 console.log( value() );  // 2
+```
+
+## 課題4
+
+`x` 倍できる関数を作ってください。
+
+```javascript
+function makeMultiply(x) {
+    return function(y) {
+      return x * y;
+    };
+}
+const multi2 = makeMultiply(2);  // 2倍
+const multi10 = makeMultiply(10);  // 10倍
+console.log(multi2(3));  // 6
+console.log(multi10(3));  // 30
 ```
 
 ## 課題5
