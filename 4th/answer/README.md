@@ -30,13 +30,14 @@ console.log( value() );  // 2
 
 ## 課題4
 
-`x` 倍できる関数を作ってください。
+`x` 倍できる関数を作ってください。  
+クロージャを利用することでパラメータの異なる複数の関数を生成できます。
 
 ```javascript
-function makeMultiply(x) {
-    return function(y) {
-      return x * y;
-    };
+const makeMultiply = (x) => {
+  return (y) => {
+    return x * y;
+  };
 }
 const multi2 = makeMultiply(2);  // 2倍
 const multi10 = makeMultiply(10);  // 10倍
