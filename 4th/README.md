@@ -757,7 +757,7 @@ hoge.piyoMethod();
 ```
 
 `innerFunc` で実行した `console.log` で自身の `fuga` プロパティが表示されたことが確認できます。  
-この他に先述した `call()` 、 `apply()` 、 `bind()` を使って `this` を束縛する方法でも代用できます。
+先述した `call()` 、 `apply()` 、 `bind()` を使って `this` を束縛する方法でも代用できます。
 
 ```javascript
 const hoge = {
@@ -778,7 +778,29 @@ hoge.piyoMethod();
 
 ### コンストラクタから呼び出した時
 
-コンストラクタから呼び出した時の説明
+コンストラクタが作成したインスタンス自身を参照します。  
+コンストラクタとインスタンスについては今回のテーマが関数であり、今回のスコープ外である `prototype` と `class` が大きく関わってくるので詳細は割愛します。  
+興味のある方は調べてみてください。
+
+今回はサンプルコードを見て、なんとなく「こんな感じなのか」レベルで認識していただけるだけで大丈夫です。  
+※JavaScriptで `class` っぽい事を表現してきた `prototype` を使ってコンストラクタを作成します。
+
+```javascript
+// コンストラクタ
+const Human = function(name) {
+  this.name = name;
+};
+
+// Humanオブジェクトの prototype に getNameメソッドを追加
+Human.prototype.getName = function() {
+  console.log('私の名前は ' + this.name + ' です。');
+};
+
+const sekiguchi = new Human('関口');  // インスタンスを作成し nameプロパティに 関口 を設定する
+const who = new Human();  // 引数を省略した場合は undefined が渡される
+sekiguchi.getName();  // 私の名前は 関口 です。
+who.getName();  // 私の名前は undefined です。
+```
 
 ### アロー関数から呼び出した時
 
