@@ -701,7 +701,80 @@ boundSomeHuman(34, 100000); // 長澤は、34歳です。妻への借金は 1000
 
 ### メソッドから呼び出した時
 
-メソッドから呼び出した時の説明
+メソッドが属するオブジェクトを参照します。  
+次のコードから `hoge` オブジェクトに属するメソッド `piyoMethod` 内で `this` をログで表示すると自分自身を参照していることがわかります。
+
+```javascript
+const hoge = {
+  fuga: 'fuga',
+  piyoMethod: function () {
+    console.log(this);  // { fuga: "fuga", piyoMethod: ƒ }
+    this.fuga = 'override fuga!!'
+  }
+};
+
+console.log(hoge.fuga); // fuga
+hoge.piyoMethod();
+```
+
+しかし、メソッド内で定義した関数内で `this` を使用するとグローバルオブジェクトを参照するので注意してください。
+
+```javascript
+const hoge = {
+  fuga: 'fuga',
+  piyoMethod: function () {
+    console.log(this);  // { fuga: "fuga", piyoMethod: ƒ }
+    
+    function innerFunc() {
+      console.log(this.fuga);  // undefined
+    }
+
+    innerFunc();
+  }
+};
+
+hoge.piyoMethod();
+```
+
+上記の回避策として `this` をメソッド内で変数に退避しておくというテクニックがあります。
+
+```javascript
+const hoge = {
+  fuga: 'fuga',
+  piyoMethod: function () {
+    const self = this;  // メソ度内で変数に格納しておくと参照元を保つことができる
+    console.log(this);  // { fuga: "fuga", piyoMethod: ƒ }
+    
+    function innerFunc() {
+      console.log(self.fuga);  // fuga
+    }
+    
+    innerFunc();
+  }
+};
+
+hoge.piyoMethod();
+```
+
+`innerFunc` で実行した `console.log` で自身の `fuga` プロパティが表示されたことが確認できます。  
+この他に先述した `call()` 、 `apply()` 、 `bind()` を使って `this` を束縛する方法でも代用できます。
+
+```javascript
+const hoge = {
+  fuga: 'fuga',
+  piyoMethod: function () {
+    console.log(this);  // { fuga: "fuga", piyoMethod: ƒ }
+    
+    function innerFunc() {
+      console.log(this.fuga);  // fuga
+    }
+    
+    innerFunc.call(this); // innerFunc内の this を hoge オブジェクトに束縛
+  }
+};
+
+hoge.piyoMethod();
+```
 
 ### コンストラクタから呼び出した時
 
