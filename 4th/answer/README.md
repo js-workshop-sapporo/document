@@ -12,10 +12,22 @@ getMessage('js workshop sapporo vol4');
 
 ## 課題2
 
+上記の配列から最大値と最小値を返す関数を代入分割を使い `max` と `min` で出力するように関数を作ってください。出力結果は `console.log` を使用してください。
+
+```javascript
+const numberList = [1000, 423, 544, 1232, 2, 6];
+const getMaxMin = (...nums) => {
+  return [Math.max(...nums), Math.min(...nums)];
+};
+const [max, min] = getMaxMin(...numberList);
+console.log(max);  // 1232
+console.log(min);  // 2
+```
 
 ## 課題3
 
-`console.log` で関数を実行するたびにカウントアップする関数を作ってください。
+`console.log` で関数を実行するたびにカウントアップする関数を作ってください。  
+クロージャを利用することでカウントアップする関数を作ることができます。
 
 ```javascript
 function getCount() {
