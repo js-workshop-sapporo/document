@@ -763,7 +763,7 @@ hoge.piyoMethod();
 const hoge = {
   fuga: 'fuga',
   piyoMethod: function () {
-    console.log(this);  // { fuga: "fuga", piyoMethod: ƒ }
+    console.log(this);  // { fuga: "fuga", piyoMethod: f }
     
     function innerFunc() {
       console.log(this.fuga);  // fuga
@@ -779,7 +779,7 @@ hoge.piyoMethod();
 ### コンストラクタから呼び出した時
 
 コンストラクタが作成したインスタンス自身を参照します。  
-コンストラクタとインスタンスについては今回のテーマが関数であり、今回のスコープ外である `prototype` と `class` が大きく関わってくるので詳細は割愛します。  
+コンストラクタとインスタンスについては今回のテーマが関数であり、今回のテーマ外である `prototype` と `class` が大きく関わってくるので詳細は割愛します。  
 興味のある方は調べてみてください。
 
 今回はサンプルコードを見て、なんとなく「こんな感じなのか」レベルで認識していただけるだけで大丈夫です。  
@@ -803,8 +803,27 @@ who.getName();  // 私の名前は undefined です。
 ```
 
 ### アロー関数から呼び出した時
+  
+アロー関数における `this` は、自身の外側のスコープに定義されたもっとも近い関数（関数定義時のコンテキスト）の `this` を参照します。  
+次のコードのアロー関数の `this` の場合、 `func` 内の `this` を参照しています。  
+この挙動のおかげで先述したような `this` を変数に退避しておく必要がなくなります。
 
-アロー関数から呼び出した時の説明
+```javascript
+const hoge = {
+  value : 'hoge',
+  func: function () {
+    const innerFunc = function () {
+      console.log(this);  // Windowオブジェクト
+    };
+    const innerArrow = () => {
+      console.log(this);  // {value: "hoge", func: f }
+    };
+    innerFunc();
+    innerArrow();
+  } 
+};
+hoge.func();
+```
 
 ## クロージャについて
 
