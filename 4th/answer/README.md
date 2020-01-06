@@ -49,4 +49,27 @@ console.log(multi10(3));  // 30
 ```
 
 ## 課題5
+
+再帰関数を使用して1から `n` までの自然数の和を返す関数を作ってください。
+
+```javascript
+function sumValue(n) {
+  if (n <= 0) return 0;
+  return n + sumValue(n - 1);
+}
+
+console.log(sumValue(10));	// 55
+```
+
+上記の関数の引数に 4 を渡した場合、次のようなイメージとなります。  
+
+```
+sumValue(4) // 10
+└ return 4 + sumValue(3)    // 4 + (3 + 2 + 1 + 0)
+    └ return 3 + sumValue(2)    // 3 + (2 + 1 + 0)
+        └ return 2 + sumValue(1)    // 2 + (1 + 0)
+            └ return 1 + sumValue(0)    // 1 + 0
+                └ if (n <= 0) return 0;    // 0
+```
+
 ## 課題6
