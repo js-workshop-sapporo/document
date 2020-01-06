@@ -1,15 +1,18 @@
 ## 課題1
 
-`console.log` に `Welcome 関数` の文字列を出力する関数を作ってください。
+引数を使い実行ごと違う文字列が出力する関数を作ってください。出力結果は `console.log` を使用してください。
 
 ```javascript
 function getMessage(text) {
   return console.log(text);
 }
 getMessage('Welcome 関数');
+getMessage('js workshop sapporo vol4');
 ```
 
 ## 課題2
+
+
 ## 課題3
 
 `console.log` で関数を実行するたびにカウントアップする関数を作ってください。
