@@ -85,3 +85,20 @@ sumValue(4) // 10
 ```
 
 ## 課題6
+
+```javascript
+const num = [1,2,3,4,5];
+
+function calcArray(array, callback) {
+  const result = [];
+  for (let key in array) {
+    result.push(callback(array[key]))
+  }
+  return result
+}
+
+function twiceValue(value) {
+  return value * 2;
+}
+console.log(calcArray(num, twiceValue));
+```
