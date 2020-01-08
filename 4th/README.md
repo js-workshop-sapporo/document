@@ -79,8 +79,8 @@ function f(a, b) {
   b = b === undefined ? 1 : b;
   return a * b;
 }
-f(2, 3) // 6
-f(2, 0) // 2
+f(2, 3); // 6
+f(2, 0); // 0
 f(2);  // 2
 ```
 
