@@ -76,7 +76,7 @@ f(2);  // x = 2 y = undefined
 
 ```javascript
 function f(a, b) {
-  b = b || 1;
+  b = b === undefined ? 1 : b;
   return a * b;
 }
 f(2, 3) // 6
