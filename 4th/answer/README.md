@@ -8,6 +8,10 @@ function getMessage(text) {
 }
 getMessage('Welcome 関数');
 getMessage('js workshop sapporo vol4');
+// or アロー関数
+const getMessage = (text) => console.log(text);
+getMessage('Welcome 関数');
+getMessage('js workshop sapporo vol4');
 ```
 
 ## 課題2
