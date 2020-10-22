@@ -23,7 +23,7 @@
     }
   },
   "lint-staged": {
-    "*.{md}": [
+    "doc/*.{md}": [
       "prettier --write",
       "textlint --fix",
       "git add"
