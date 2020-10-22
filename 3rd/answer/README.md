@@ -43,7 +43,7 @@ sortメソッドは元の配列を変更してしまうので、sliceで配列�
 
 ### 比較関数
 
-配列の要素は比較関数の返り値に基づきソートされます。
+配列の要素は比較関数の戻り値にもとづきソートされます。
 
 - 0より小さい − aはbの前に来る
 - 0より大きい − bはaの前に来る
@@ -67,7 +67,7 @@ filter()メソッドを使用します。
 引数として与えれた値を各配列要素に対して実行し新しい配列を生成します。  
 このメソッドは元の配列は変更しません。
 
-第2引数のオブジェクトも指定することができます。
+第2引数のオブジェクトも指定できます。
 
 ```javascript
 const items = 配列データ;
@@ -91,7 +91,7 @@ console.log(new_items);
 課題2と4の応用です。  
 `Array.prototype.filter()` と `Array.prototype.map()` を使用します。
 要素のチェックには `Array.prototype.indexOf()` を使用します。
-2つの配列から相互で関係している値を元に新たな値を出力する事は実務でもよくあります。  
+2つの配列から相互で関係している値を元に新たな値を出力することは実務でもよくあります。  
 この例だと `city` 配列内の `pref_id` が `prefecture` 配列の `id` と関係しています。
 
 - [Array.prototype.indexOf() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
@@ -120,7 +120,7 @@ console.log(filteredCity);
 ## 課題6の解答
 
 `Array.prototype.reduce()` または `Array.prototype.forEach()` を使用します。  
-ただ、 `forEach` は引数に与えられた関数を配列の各要素に対して実行するためのメソッドなので、単一の値にしたい場合は `reduce` メソッドを使うのが理想かもしれません。
+ただ、 `forEach` は引数に与えられた関数を配列の各要素に対して実行するためのメソッドですので、単一の値にしたい場合は `reduce` メソッドを使うのが理想かもしれません。
 
 - [Array.prototype.reduce() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 - [Array.prototype.forEach() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -340,7 +340,7 @@ console.log(countryListGroups);
 
 ## 課題10の解答
 
-array.reverse()を利用し、配列の要素を逆順に出来ます。  
+array.reverse()を利用し、配列の要素を逆順にできます。
 
 ### 参考
 
@@ -353,7 +353,7 @@ const reverseArray = array.reverse();
 console.log(reverseArray);
 ```
 
-### TIPS
+### Tips
 `reverse()` メソッドは元の配列（回答例の `array` 変数）を上書きしてしまいます。
 
 ```javascript
@@ -366,7 +366,7 @@ console.log(array); // → [7, 6, 5, 4, 3, 2, 1]
 
 ## 課題11の解答
 
-array.flat()を利用し、ネスト化された配列を平滑化することが出来ます。  
+array.flat()を利用し、ネスト化された配列を平滑化できます。
 
 ### 参考
 
@@ -379,8 +379,8 @@ const flatArray = array.flat();
 console.log(flatArray);
 ```
 
-### TIPS
-`flat()` メソッドは、`ES2019` で追加されたメソッドなので、対応ブラウザ等に注意が必要
+### Tips
+`flat()` メソッドは、`ES2019` で追加されたメソッドですので、対応ブラウザ等に注意が必要
 
 - [Array.prototype.flat() - JavaScript | MDN 対応状況](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat#Browser_compatibility)
 
@@ -391,7 +391,7 @@ console.log(flatArray);
 1. ネストされた配列を平滑化
 1. 平滑化後の配列を逆順に反転　(反転処理を `reduceRight` を利用している)
 
-回答例はメソッドチェーンを利用した例であるが、処理毎に変数に代入しても可
+回答例はメソッドチェインを利用した例であるが、処理毎に変数に代入しても可
 
 ### 参考
 

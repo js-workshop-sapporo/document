@@ -53,7 +53,7 @@ console.log(typeof func);  // function
 
 ### Topics
 
-配列の型を判定する場合は、以下のようにtoStringでcallすると[object Array]を返すことが可能になります。  
+配列の型を判定する場合は、次のようにtoStringでcallすると[object Array]を返すことが可能になります。  
 他にもNullも[object Null]と判定します。
 
 ```

@@ -3,19 +3,19 @@
 DOMについて学ぶ回です。
 
 ローカルサーバとして `npx @js-primer/local-server` を利用して作っていきます。
-`task/source` にコマンドラインでアクセスして 上記のコマンドを使うことでブラウザで `localhost:3000` でHTMLを表示させることができます。  
-Node.jsをパソコンに入ってる方は先にインストールしておきましょう。
+`task/source` にコマンドラインでアクセスして上記のコマンドを使うことでブラウザで `localhost:3000` でHTMLを表示させることができます。  
+Node.jsをPCに入っている方は先にインストールしておきましょう。
 
-フッター
+フッタ
 
 ## Node.jsインストール手順
 
-### インストーラーを使う（初級者向け）
+### インストーラを使う（初級者向け）
 
 手っ取り早くNode.jsを動かしたい方は[公式サイト](https://nodejs.org/ja/)からLTS版をダウンロードしてください。
 
 インストール手順は下記サイトを参考にしてください。  
-Windows向けのページになりますがMacでも概ね同じです。
+Windows向けのページになりますがMacでもおおむね同じです。
 
 - [Node.jsをインストールする - Qiita](https://qiita.com/sefoo0104/items/0653c935ea4a4db9dc2b)
 
@@ -33,7 +33,7 @@ Windowsの場合は `nodist` がおすすめです。
 ### Node.jsがインストールされたか確認する
 
 Macの場合はターミナル。  
-Windowsの場合はコマンドプロンプトやPowerShell、Windows ターミナルを使って下記コマンドを叩いてください。
+Windowsの場合はコマンドプロンプトやPowerShell、Windowsターミナルを使って下記コマンドを叩いてください。
 
 ```shell
 $ node -v
@@ -42,15 +42,15 @@ v12.18.0
 
 ## DOMについて
 
-Web制作をする上でDOMとJSは切って離せない関係と言えるでしょう。  
+Web制作をする上でDOMとJSは切って離せない関係といえるでしょう。  
 課題に入る前にDOMとは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
 ### DOMとは？ 
 
-DOMとは `Document Object Model` の略で、ウェブ上の文章コンテンツを構造化したオブジェクトです。  
+DOMとは `Document Object Model` の略で、Web上の文章コンテンツを構造化したオブジェクトです。  
 オブジェクトについてはJavaScriptの基本となる知識となりますのでMdNの下記ページを確認してください。
 
 - [JavaScript オブジェクトの基本](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics)
 
-DOMはHTMLやXMLをプログラミング言語（JSなど）で扱うためのインターフェイスとなります。  
-たとえばJSでDOMにアクセスして、テキストやスタイルを操作することが可能です。
+DOMはHTMLやXMLをプログラミング言語（JSなど）で扱うためのインタフェースとなります。  
+たとえばJSでDOMにアクセスして、テキストやスタイルを操作できます。

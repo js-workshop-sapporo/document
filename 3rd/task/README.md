@@ -1,6 +1,6 @@
 ## 課題1
 
-既存の配列変数 `x_menbers` に新しく `x_new_menbers` という配列変数を作り NEWメンバー `HEATH` と `SUGIZO` を追加してください。
+既存の配列変数 `x_menbers` に新しく `x_new_menbers` という配列変数を作りNEWメンバー `HEATH` と `SUGIZO` を追加してください。
 
 ```javascript
 const x_menbers = ['YOSHIKI', 'TOSHI', 'HIDE', 'PATA', 'TAIJI'];
@@ -16,7 +16,7 @@ const x_menbers = ['YoShIKi', 'ToShI', 'HIdE', 'paTA', 'TAiJI', 'hEAtH', 'sUGIzo
 
 ## 課題3
 
-以下の配列の並び順を昇順になるように新しい配列で並び替えてください。
+次の配列の並び順を昇順になるように新しい配列で並び替えてください。
 
 ```javascript
 const numbers = [5, 6, 4, 2, 10, 44, 33, 30, 50, 1, 999, 79, 48, 66];
@@ -24,7 +24,7 @@ const numbers = [5, 6, 4, 2, 10, 44, 33, 30, 50, 1, 999, 79, 48, 66];
 
 ## 課題4
 
-以下の変数配列 `items` から3の倍数を絞り込みして、新しい `new_items` の変数配列を作ってください。
+次の変数配列 `items` から3の倍数を絞り込みして、新しい `new_items` の変数配列を作ってください。
 
 ```javascript
 const items = [5, 2, 7, 8, 3, 1, 6, 8, 4];
@@ -32,7 +32,7 @@ const items = [5, 2, 7, 8, 3, 1, 6, 8, 4];
 
 ## 課題5
 
-以下の配列 `city` を、 配列 `prefecture` の `id` で絞り込みされた配列を作ってください。
+次の配列 `city` を、 配列 `prefecture` の `id` で絞り込みされた配列を作ってください。
 
 ```javascript
 const city = [
@@ -51,7 +51,7 @@ const prefecture = [
 
 ## 課題6
 
-以下の配列 `cart` から `price` の合計値を求めてください。  
+次の配列 `cart` から `price` の合計値を求めてください。  
 ※消費税は加算しないものとします。
 
 ```javascript
@@ -65,10 +65,10 @@ const cart = [
 
 ## 課題7
 
-以下の配列 `cart` から `price` の消費税も含めた合計値を求めてください。  
-消費税は配列 `tax` を使用し、各商品の合計値の小数点は切り捨ててください。
+次の配列 `cart` から `price` の消費税も含めた合計値を求めてください。  
+消費税は配列 `tax` を使用し、各商品の合計値の小数点は切り捨てください。
 
-ヒント： 小数点切り捨ては `Math.floor(number)` で出来ます。
+ヒント： 小数点切り捨ては `Math.floor(number)` でできます。
 
 ```javascript
 const cart = [
@@ -87,10 +87,10 @@ const tax = [
 
 ## 課題8
 
-消費税の計算は式は以下になります。  
+消費税の計算は式は次になります。  
 [https://www.keigenzeiritsu.info/article/18882](https://www.keigenzeiritsu.info/article/18882)
 
-以下の配列 `cart` から `price` は税込み価格になります。消費税8%と10%を組み合わせて税抜価格の合計値を求めてください。
+次の配列 `cart` から `price` は税込み価格になります。消費税8%と10%を組み合わせて税抜価格の合計値を求めてください。
 ※小数点は四捨五入する
 
 - 酒：10%
@@ -112,7 +112,7 @@ const cart = [
 
 ## 課題9
 
-`countryLists` の配列（国）から `countryAreaLists` の配列を条件（エリアごと）を参照して、各国が所属するエリアに格納された形で `countryListGroups` という変数オブジェクトを作成してください。（ `Asia、Europe、Africa、MiddleEast、Oceania` ）
+`countryLists` の配列（国）から `countryAreaLists` の配列を条件（エリアごと）を参照して、各国が所属するエリアに格納された形で `countryListGroups` という変数オブジェクトを作成してください。（`Asia、Europe、Africa、MiddleEast、Oceania`）
 
 ```javascript
 // 出力結果 console.log(countryListGroups)
@@ -156,7 +156,7 @@ const countryAreaLists = [
 
 ## 課題12
 
-`[[1, 2, 3], [4, 5], [6, 7]]` のネストされた配列から以下の配列を出力してください。
+`[[1, 2, 3], [4, 5], [6, 7]]` のネストされた配列から次の配列を出力してください。
 
 ```javascript
 // 出力結果 

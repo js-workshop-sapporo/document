@@ -181,7 +181,7 @@ for (let i = 0; i < TEAM_NACS.length; i++) {
 console.log(concatNacs)
 ```
 
-解答例: 配列のメソッドを使う（今回はifとforの会ですが例の一つとして…）
+解答例: 配列のメソッドを使う（今回はifとforの会ですが例のひとつとして…）
 ```javascript
 const TEAM_NACS = ['森崎', '安田', '戸次', '大泉', '音尾']
 
@@ -212,7 +212,7 @@ kukuElement.forEach(parent => {
 });
 ```
 
-解答例: forループのみで頑張るパターン   
+解答例: forループのみで頑張るパターン
 ```javascript
 for(let i = 1; i <= 9; i++) {
   // 1行分の結果を保持
