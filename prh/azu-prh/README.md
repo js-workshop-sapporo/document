@@ -15,11 +15,11 @@ You should install [prh](https://github.com/vvakame/prh "prh") or [textlint-rule
 - [javascript.yml](javascript.yml) -  JavaScript Dictionary
 - [other.yml](other.yml) -  Other
 - [software.yml](software.yml) -  Software dictionary
-- [ja/jser-info.yml](ja/jser-info.yml) -  JSer.info特有の表現統一の辞書
+- [ja/jser-info.yml](ja/jser-info.yml) -  JSer.info 特有の表現統一の辞書
 - [ja/kanji-open.yml](ja/kanji-open.yml) -  漢字の開きをチェックする辞書
 - [ja/spoken.yml](ja/spoken.yml) -  口語表現をチェックする辞書
 - [ja/typo.yml](ja/typo.yml) -  明らかなtypoをチェックする辞書
-- [ja/web+db.yml](ja/web+db.yml) -  Web+DB PRESS用語統一ファイルをよりゆるやかにした辞書
+- [ja/web+db.yml](ja/web+db.yml) -  WEB+DB PRESS用語統一ファイルをよりゆるやかにした辞書
 
 ## Usage
 
