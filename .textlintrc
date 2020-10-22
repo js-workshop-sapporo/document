@@ -1,0 +1,26 @@
+{
+  "filters": {
+    "whitelist": {
+      "whitelistConfigPaths": [
+        "./textlint-allow.json"
+      ]
+    }
+  },
+  "rules": {
+    "preset-ja-spacing": true,
+    "preset-ja-technical-writing": true,
+    "prh": {
+      "rulePaths" :[
+        "prh/azu-prh/ja/kanji-open.yml",
+        "prh/azu-prh/ja/spoken.yml",
+        "prh/azu-prh/ja/typo.yml",
+        "prh/azu-prh/javascript.yml",
+        "prh/azu-prh/css.yml",
+        "prh/azu-prh/software.yml",
+        "prh/rules/media/techbooster.yml",
+        "prh/rules/media/WEB+DB_PRESS.yml"
+      ]
+    },
+    "@textlint-rule/no-invalid-control-character": true
+  }
+}
