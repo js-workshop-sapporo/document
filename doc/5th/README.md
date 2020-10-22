@@ -21,4 +21,17 @@ DOM とは `Document Object Model` の略で、Web 上の文章コンテンツ�
 - [JavaScript オブジェクトの基本](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics)
 
 DOM は HTML や XML をプログラミング言語（JS など）で扱うためのインタフェースとなります。  
-たとえば JS で DOM にアクセスして、テキストやスタイルを操作できます。
+たとえば JS で DOM にアクセスして、テキストやスタイルを操作できます。  
+
+```html
+<h1 id="title">タイトル</h1>
+```
+```javascript
+// id="title" の要素を取得する
+const title = document.getElementById('title');
+// <h1 id="title">タイトルを変更しました</h1> に更新される
+title.innerText = 'タイトルを変更しました';
+// console.dir()を使えばElementがどんなプロパティを持っているか階層的なリストで確認できます
+console.dir(title);
+```
+
