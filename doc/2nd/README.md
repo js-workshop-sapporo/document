@@ -9,30 +9,30 @@
 
 ### 比較演算子
 
-左辺/右辺の値を比較して、その結果をtrue/false（真偽値）として返します。  
-ifやdo...whileのような条件分岐や繰り返し構文と合わせて使用します。
+左辺/右辺の値を比較して、その結果を true/false（真偽値）として返します。  
+if や do...while のような条件分岐や繰り返し構文と合わせて使用します。
 
-|演算子|概要|例|
-|:----|:-----|:----|
-| `==` |左辺と右辺の値が等しい場合はtrue|5 == 5 // true|
-| `!=` |左辺と右辺の値が等しくない場合はtrue|5 != 5 // false|
-| `<` |左辺が右辺よりも小さい場合はtrue|5 < 5 // false|
-| `<=` |左辺が右辺次の場合はtrue|5 <= 5 // true|
-| `>` |左辺が右辺よりも大きい場合はtrue|5 > 3 // true|
-| `>=` |左辺が右辺以上の場合はtrue|5 >= 3 // true|
-| `===`|左辺と右辺の値が等しくてデータ型も同じ場合はtrue|5 === 5 // true|
-| `!==` |左辺と右辺の値が等しくない場合、またはデータ型が異なる場合はtrue|5 !== 5 // false|
-| `?:` | `条件式 ? 式1 : 式2` 条件式がtrueの場合は式1をfalseの場合は式2を返す |（x==1）? 1 : 0 // 1または0|
+| 演算子 | 概要                                                                         | 例                            |
+| :----- | :--------------------------------------------------------------------------- | :---------------------------- |
+| `==`   | 左辺と右辺の値が等しい場合は true                                            | 5 == 5 // true                |
+| `!=`   | 左辺と右辺の値が等しくない場合は true                                        | 5 != 5 // false               |
+| `<`    | 左辺が右辺よりも小さい場合は true                                            | 5 < 5 // false                |
+| `<=`   | 左辺が右辺次の場合は true                                                    | 5 <= 5 // true                |
+| `>`    | 左辺が右辺よりも大きい場合は true                                            | 5 > 3 // true                 |
+| `>=`   | 左辺が右辺以上の場合は true                                                  | 5 >= 3 // true                |
+| `===`  | 左辺と右辺の値が等しくてデータ型も同じ場合は true                            | 5 === 5 // true               |
+| `!==`  | 左辺と右辺の値が等しくない場合、またはデータ型が異なる場合は true            | 5 !== 5 // false              |
+| `?:`   | `条件式 ? 式1 : 式2` 条件式が true の場合は式 1 を false の場合は式 2 を返す | （x==1）? 1 : 0 // 1 または 0 |
 
 #### 等価演算子（==）と同値演算子（===）について
 
 ### 論理演算子
 
-複数の条件式（論理値）を論理的に結合し、その結果をtrue/falseとして返します。通常比較演算子と組み合わせて利用することで複雑な式を表現できます。
+複数の条件式（論理値）を論理的に結合し、その結果を true/false として返します。通常比較演算子と組み合わせて利用することで複雑な式を表現できます。
 
-- `&&` 左右の式がともにtrueの場合はtrue例：100 === 100 && 1000 === 1000 // true
-- `||` 左右の式のどちらかがtrueの場合はtrue例：100 === 100 || 1000 === 500 // true
-- `!`  式がfalseの場合はtrue例：!（10 > 100）// true
+- `&&` 左右の式がともに true の場合は true 例：100 === 100 && 1000 === 1000 // true
+- `||` 左右の式のどちらかが true の場合は true 例：100 === 100 || 1000 === 500 // true
+- `!` 式が false の場合は true 例：!（10 > 100）// true
 
 ## 制御構文について
 
@@ -46,7 +46,7 @@ if (condition) {
 }
 ```
 
-### else if文
+### else if 文
 
 ```javascript
 if (condition) {
@@ -58,7 +58,7 @@ if (condition) {
 }
 ```
 
-### falseと評価される値
+### false と評価される値
 
 - `false`
 - `undefined`
@@ -71,7 +71,7 @@ if (condition) {
 
 参考: [制御フローとエラー処理 - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
-### Array#mapについて
+### Array#map について
 
 [Array.prototype.map() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
@@ -81,8 +81,8 @@ if (condition) {
 
 ```javascript
 const num = [1, 2, 3];
-const newNum = num.map((data) => {
+const newNum = num.map(data => {
   return data * 10;
 });
-console.log(newNum) // [10, 20, 30]
+console.log(newNum); // [10, 20, 30]
 ```
