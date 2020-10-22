@@ -1,0 +1,6 @@
+[submodule "prh/rules"]
+	path = prh/rules
+	url = https://github.com/prh/rules.git
+[submodule "prh/azu-prh"]
+	path = prh/azu-prh
+	url = https://github.com/azu/prh.yml.git
