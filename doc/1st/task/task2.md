@@ -1,9 +1,9 @@
-# 課題2
+# 課題 2
 
 ## 変数を console.log() で確認してみましょう
 
-作成した変数をconsole.logで確認します。  
-このとき、作業用ファイルのHTMLをブラウザで開いてみましょう。
+作成した変数を console.log で確認します。  
+このとき、作業用ファイルの HTML をブラウザで開いてみましょう。
 
 ```js
 // 未定義
@@ -15,7 +15,7 @@ let varIsNull = null;
 console.log(varIsNull);
 
 // 文字列型
-let str = 'js workshop sapporo 第1回目';
+let str = "js workshop sapporo 第1回目";
 console.log(str);
 
 // 数値型
@@ -32,12 +32,12 @@ console.log(array);
 
 // オブジェクト
 let obj = {
-  hoge: 'ほげ',
-  piyo: 'ぴよ'
+  hoge: "ほげ",
+  piyo: "ぴよ"
 };
 console.log(obj);
 
 // 関数（アロー関数）
-const func = () => '関数';
+const func = () => "関数";
 console.log(func());
 ```

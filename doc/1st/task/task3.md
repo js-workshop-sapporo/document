@@ -1,6 +1,6 @@
-# 課題3
+# 課題 3
 
-## 変数の型を console.log() と typeof演算子で確認してみましょう
+## 変数の型を console.log() と typeof 演算子で確認してみましょう
 
 定義した変数の型を確認してみましょう。
 
@@ -14,7 +14,7 @@ let varIsNull = null;
 console.log(typeof varIsNull);
 
 // 文字列型
-let str = 'js workshop sapporo 第1回目';
+let str = "js workshop sapporo 第1回目";
 console.log(typeof str);
 
 // 数値型
@@ -31,12 +31,12 @@ console.log(typeof array);
 
 // オブジェクト
 let obj = {
-  hoge: 'ほげ',
-  piyo: 'ぴよ'
+  hoge: "ほげ",
+  piyo: "ぴよ"
 };
 console.log(typeof obj);
 
 // 関数（アロー関数）
-const func = () => '関数';
+const func = () => "関数";
 console.log(typeof func);
 ```

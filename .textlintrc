@@ -7,7 +7,7 @@
     }
   },
   "rules": {
-    "preset-ja-spacing": true,
+    "preset-ja-spacing": false,
     "preset-ja-technical-writing": true,
     "prh": {
       "rulePaths" :[
