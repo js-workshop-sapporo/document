@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'hello'"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

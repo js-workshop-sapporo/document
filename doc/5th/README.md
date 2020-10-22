@@ -8,7 +8,7 @@ Node.jsをPCに入っている方は先にインストールしておきまし�
 
 フッタ
 
-## Node.jsインストール手順
+## Node.js インストール手順
 
 ### インストーラを使う（初級者向け）
 
@@ -17,20 +17,20 @@ Node.jsをPCに入っている方は先にインストールしておきまし�
 インストール手順は下記サイトを参考にしてください。  
 Windows向けのページになりますがMacでもおおむね同じです。
 
-- [Node.jsをインストールする - Qiita](https://qiita.com/sefoo0104/items/0653c935ea4a4db9dc2b)
+- [Node.js をインストールする - Qiita](https://qiita.com/sefoo0104/items/0653c935ea4a4db9dc2b)
 
 ### バージョン管理できるようする
 
 Macの場合、 `nodenv` などのツールを使いましょう。
 
-- [MacにNode.jsをインストール（anyenv + nodenv編） - Qiita](https://qiita.com/kyosuke5_20/items/eece817eb283fc9d214f)
+- [Mac に Node.js をインストール（anyenv + nodenv 編） - Qiita](https://qiita.com/kyosuke5_20/items/eece817eb283fc9d214f)
 
 Windowsの場合は `nodist` がおすすめです。
 
-- [nodistでNode.jsをバージョン管理 - Qiita](https://qiita.com/satoyan419/items/56e0b5f35912b9374305)
-- [Windows環境で Node.js のバージョンを管理（npmも）｜WEBMAN](https://webman-japan.com/win-node-npm-ver-manage/)
+- [nodist で Node.js をバージョン管理 - Qiita](https://qiita.com/satoyan419/items/56e0b5f35912b9374305)
+- [Windows 環境で Node.js のバージョンを管理（npm も）｜ WEBMAN](https://webman-japan.com/win-node-npm-ver-manage/)
 
-### Node.jsがインストールされたか確認する
+### Node.js がインストールされたか確認する
 
 Macの場合はターミナル。  
 Windowsの場合はコマンドプロンプトやPowerShell、Windowsターミナルを使って下記コマンドを叩いてください。
@@ -40,12 +40,12 @@ $ node -v
 v12.18.0
 ```
 
-## DOMについて
+## DOM について
 
-Web制作をする上でDOMとJSは切って離せない関係といえるでしょう。  
+Web制作をする上でDOMとJSは切って離せない関係と言えるでしょう。  
 課題に入る前にDOMとは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
-### DOMとは？ 
+### DOM とは？
 
 DOMとは `Document Object Model` の略で、Web上の文章コンテンツを構造化したオブジェクトです。  
 オブジェクトについてはJavaScriptの基本となる知識となりますのでMdNの下記ページを確認してください。
