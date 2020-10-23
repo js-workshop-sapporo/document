@@ -1,0 +1,5 @@
+.accordion__body {
+  overflow: hidden;
+  transition: all 0.5s;
+  background-color: #eee;
+}
