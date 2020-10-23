@@ -6,6 +6,17 @@
 
 ## 課題 2
 
+accordion を作ってみる
+
+```html
+<div class="accordion">
+  <button id="accordion__trigger" class="accordion__title">タイトル</button>
+  <div id="toggle__body" class="accordion__body">
+    ここにアコーディオンの本文
+  </div>
+</div>
+```
+
 ## 課題 3
 
 ## 課題 4
