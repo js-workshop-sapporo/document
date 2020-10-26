@@ -10,7 +10,7 @@ Node.js のインストールについては[こちら](https://github.com/js-wo
 
 ## DOM について
 
-Web 制作をする上で DOM と JS は切って離せない関係といえるでしょう。  
+Web 制作をする上で DOM と JS は切って離せない関係と言えるでしょう。  
 課題に入る前に DOM とは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
 ### DOM とは？
@@ -20,7 +20,10 @@ DOM とは `Document Object Model` の略で、Web 上の文章コンテンツ�
 
 - [JavaScript オブジェクトの基本](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics)
 
-DOM は HTML や XML をプログラミング言語（JS など）で扱うためのインタフェースとなります。  
+DOM は Document Object Model という名前の略称で、 HTML や XML をプログラミング言語（JS など）で扱うための API となります。  
+その名のとおり、文書に含まれる要素、属性をオブジェクトとみなし、文書というのはオブジェクトの集合体だと考えることができます。  
+文書を構成するオブジェクトは、要素ノード、属性ノード、テキストノードなどと呼びます。  
+DOM にはこれらのノードを取得、追加、置換、削除ができる API を提供しています。  
 たとえば JS で DOM にアクセスして、テキストやスタイルを操作できます。
 
 ```html
