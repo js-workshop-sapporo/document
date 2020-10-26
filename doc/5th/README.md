@@ -10,7 +10,7 @@ Node.js のインストールについては[こちら](https://github.com/js-wo
 
 ## DOM について
 
-Web 制作をする上で DOM と JS は切って離せない関係と言えるでしょう。  
+Web 制作をする上で DOM と JS は切って離せない関係といえるでしょう。  
 課題に入る前に DOM とは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
 ### DOM とは？
@@ -24,14 +24,28 @@ DOM は HTML や XML をプログラミング言語（JS など）で扱うた�
 たとえば JS で DOM にアクセスして、テキストやスタイルを操作できます。
 
 ```html
-<h1 id="title">タイトル</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSWSP Vol.5</title>
+  </head>
+  <body>
+    <h1 id="title">JSWSPについて</h1>
+    <p>開催日は<strong>2020/11/13</strong>です！</p>
+  </body>
+</html>
 ```
 
 ```javascript
 // id="title" の要素を取得する
 const title = document.getElementById("title");
-// <h1 id="title">タイトルを変更しました</h1> に更新される
-title.innerText = "タイトルを変更しました";
+// <h1 id="title">JSWSP Vol.5 Online について</h1> に更新される
+title.innerText = "JSWSP Vol.5 Online について";
 // console.dir()を使えばElementがどんなプロパティを持っているか階層的なリストで確認できます
 console.dir(title);
 ```
+
+また、DOM はドキュメントを文章ツリーとして扱います。
+したがって、上記のような html の場合、次のようなツリー構造と解釈されます。
+
+![ドキュメントツリー](./document_tree.png)
