@@ -6,18 +6,15 @@
 
 ## 課題 2
 
-accordion を作ってみる
+複数の要素に対して、アコーディオンを実装してみましょう。
 
-```html
-<div class="accordion">
-  <button id="accordion__trigger" class="accordion__title">タイトル</button>
-  <div id="toggle__body" class="accordion__body">
-    ここにアコーディオンの本文
-  </div>
-</div>
-```
+- [課題 2 用ファイル](https://github.com/js-workshop-sapporo/source/tree/main/src/5th/task/02)
 
 ## 課題 3
+
+モーダルを実装してみましょう。
+
+- [課題 3 用ファイル]()
 
 ## 課題 4
 
