@@ -7,10 +7,6 @@
 - 初期値で一個目の要素が表示
 - 2、3 要素をクリックでタブ切り替えができる
 
-### base file
-
-- [課題 1 用ファイル](https://github.com/js-workshop-sapporo/draft-document/blob/feature/5th/5th/task/source/task1/)
-
 ## 課題 2
 
 複数の要素に対して、アコーディオンを実装してみましょう。
@@ -21,10 +17,6 @@
 - 開閉処理は開くような動きにする
 - 複数のイベントが発行できるようにする
 
-### base file
-
-- [課題 2 用ファイル](https://github.com/js-workshop-sapporo/source/tree/main/src/5th/task/02)
-
 ## 課題 3
 
 モーダルを実装してみましょう。
@@ -34,10 +26,6 @@
 - button 要素をクリックしモーダル表示
 - Close/Save をクリックしモーダル非表示
 - オーバーレイ（モーダル要素の外）をクリックでモーダル非表示
-
-### base file
-
-- [課題 3 用ファイル]()
 
 ## 課題 4
 
