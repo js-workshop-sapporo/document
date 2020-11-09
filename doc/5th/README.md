@@ -6,11 +6,11 @@ DOM について学ぶ回です。
 `task/source` にコマンドラインでアクセスして上記のコマンドを使うことでブラウザで `localhost:3000` で HTML を表示させることができます。  
 Node.js を PC に入っている方は先にインストールしておきましょう。
 
-Node.js のインストールについては[こちら](https://github.com/js-workshop-sapporo/draft-document/blob/feature/5th/doc/node/README.md)をご確認ください。
+Node.js のインストールについては[こちら](https://github.com/js-workshop-sapporo/document/tree/master/doc/node)をご確認ください。
 
 ## DOM について
 
-Web 制作をする上で DOM と JS は切って離せない関係と言えるでしょう。  
+Web 制作をする上で DOM と JS は切って離せない関係といえるでしょう。  
 課題に入る前に DOM とは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
 ### DOM とは？

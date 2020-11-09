@@ -27,5 +27,5 @@ Windows の場合はコマンドプロンプトや PowerShell、Windows ター�
 
 ```shell
 $ node -v
-v12.18.0
+v14.15.0  // 2020/11/09時点
 ```
