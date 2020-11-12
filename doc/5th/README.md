@@ -17,7 +17,7 @@ Web 制作をする上で DOM と JS は切って離せない関係と言える�
 ### DOM とは？
 
 DOM とは `Document Object Model` の略で、Web 上の文章コンテンツを構造化したオブジェクトです。  
-オブジェクトについては JavaScript の基本となる知識となりますので MdN の下記ページを確認してください。
+オブジェクトについては JavaScript の基本となる知識となりますので MDN の下記ページを確認してください。
 
 - [JavaScript オブジェクトの基本](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics)
 
