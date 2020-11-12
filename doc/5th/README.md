@@ -11,7 +11,7 @@ Node.js のインストールについては[こちら](https://github.com/js-wo
 
 ## DOM について
 
-Web 制作をする上で DOM と JS は切って離せない関係と言えるでしょう。  
+Web 制作をする上で DOM と JS は切って離せない関係といえるでしょう。  
 課題に入る前に DOM とは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
 ### DOM とは？
@@ -58,7 +58,7 @@ console.dir(title);
 
 ### addEventListener
 
-特定の要素に対してイベントを呼び出すための関数を設定できます。  
+特定の要素に対してイベントを呼びだすための関数を設定できます。  
 今回はクリックやドラッグで何かをする処理が必要になるため、イベントを発行させたい要素に対して設定していきます。
 
 ```js
@@ -107,7 +107,43 @@ console.dir(title);
 
 - [addEventListener:MDN](https://developer.mozilla.org/ja/docs/Web/API/EventTarget/addEventListener)
 
-### document.getElementById、document.querySelectorAll、document.querySelector
+### document.getElementById
+
+指定した id の値をもつ要素を Element オブジェクトとして返すメソッドになります。  
+HTML のタグから指定した id を習得を処理を行いたい時に利用します。
+
+- 指定した id が存在しない場合は、`null` を返します。
+
+利用例しては、一度変数に格納してから参照するのが一般的です。
+
+```html
+<div class="targetId">Id</div>
+```
+
+```js
+const targetId = document.getElementById("targetId");
+```
+
+- [getElementById:MDN](https://developer.mozilla.org/ja/docs/Web/API/Document/getElementById)
+
+### document.querySelectorAll、document.querySelector
+
+querySelector は、HTML 上の要素に設定したセレクタに一致する最初の HTML 要素を取得します。
+
+```js
+const className = document.querySelectorAll(".className");
+```
+
+querySelectorAll は、HTML 上の要素に設定したセレクタに一致するすべての HTML 要素を取得します。
+
+```js
+const classNameAll = document.querySelectorAll(".classNameAll");
+```
+
+クラスはセレクタを複数持たせるため、複数のセレクタにかけたい場合などに利用します。
+
+- [querySelectorAll:MDN](https://developer.mozilla.org/ja/docs/Web/API/Document/querySelectorAll)
+- [querySelector:MDN](https://developer.mozilla.org/ja/docs/Web/API/Document/querySelector)
 
 ### classList.add、classList.remove
 
