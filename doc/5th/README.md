@@ -11,7 +11,7 @@ Node.js のインストールについては[こちら](https://github.com/js-wo
 
 ## DOM について
 
-Web 制作をする上で DOM と JS は切って離せない関係といえるでしょう。  
+Web 制作をする上で DOM と JS は切って離せない関係と言えるでしょう。  
 課題に入る前に DOM とは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
 ### DOM とは？
@@ -58,7 +58,7 @@ console.dir(title);
 
 ### addEventListener
 
-特定の要素に対してイベントを呼びだすための関数を設定できます。  
+特定の要素に対してイベントを呼び出すための関数を設定できます。  
 今回はクリックやドラッグで何かをする処理が必要になるため、イベントを発行させたい要素に対して設定していきます。
 
 ```js
@@ -106,3 +106,13 @@ console.dir(title);
 ```
 
 - [addEventListener:MDN](https://developer.mozilla.org/ja/docs/Web/API/EventTarget/addEventListener)
+
+### document.getElementById、document.querySelectorAll、document.querySelector
+
+### classList.add、classList.remove
+
+### setAttribute、getAttribute
+
+### appendChild、removeChild
+
+### FileReader、dataTransfer
