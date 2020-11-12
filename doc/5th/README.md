@@ -2,15 +2,16 @@
 
 DOM について学ぶ回です。
 
-ローカルサーバとして `npx @js-primer/local-server` を利用して作っていきます。
-`task/source` にコマンドラインでアクセスして上記のコマンドを使うことでブラウザで `localhost:3000` で HTML を表示させることができます。  
-Node.js を PC に入っている方は先にインストールしておきましょう。
+ローカルサーバとして `npx @js-primer/local-server` を利用して作っていきます。  
+[source リポジトリ](https://github.com/js-workshop-sapporo/source) から先にベースファイルをクローンしておきます。
+クローン後、ターミナルから `source` ディレクトリに移動して上記のコマンドを使うことでブラウザで `localhost:3000` で HTML を表示させることができます。  
+Node.js を インストールされてない方は、インストールしておきましょう。
 
 Node.js のインストールについては[こちら](https://github.com/js-workshop-sapporo/document/tree/master/doc/node)をご確認ください。
 
 ## DOM について
 
-Web 制作をする上で DOM と JS は切って離せない関係といえるでしょう。  
+Web 制作をする上で DOM と JS は切って離せない関係と言えるでしょう。  
 課題に入る前に DOM とは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
 ### DOM とは？
