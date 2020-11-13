@@ -11,7 +11,7 @@ Node.js のインストールについては[こちら](https://github.com/js-wo
 
 ## DOM について
 
-Web 制作をする上で DOM と JS は切って離せない関係と言えるでしょう。  
+Web 制作をする上で DOM と JS は切って離せない関係といえるでしょう。  
 課題に入る前に DOM とは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
 ### DOM とは？
@@ -58,7 +58,7 @@ console.dir(title);
 
 ### addEventListener
 
-特定の要素に対してイベントを呼び出すための関数を設定できます。  
+特定の要素に対してイベントを呼びだすための関数を設定できます。  
 今回はクリックやドラッグで何かをする処理が必要になるため、イベントを発行させたい要素に対して設定していきます。
 
 ```js
@@ -140,6 +140,10 @@ querySelectorAll は、HTML 上の要素に設定したセレクタに一致す�
 const classNameAll = document.querySelectorAll(".classNameAll");
 ```
 
+```js
+const className = document.querySelector(".className");
+```
+
 クラスはセレクタを複数持たせるため、複数のセレクタにかけたい場合などに利用します。
 
 - [querySelectorAll:MDN](https://developer.mozilla.org/ja/docs/Web/API/Document/querySelectorAll)
@@ -147,14 +151,42 @@ const classNameAll = document.querySelectorAll(".classNameAll");
 
 ### classList.add、classList.remove
 
-- [classList;MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/classList)
+classList.add は、指定した要素へクラスを追加できます。  
+classList.remove は、指定した要素にあるクラスを削除できます。
+
+jQuery でよく使う `addClass` や `removeClass` に相当します。
+
+- [classList:MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/classList)
 
 ### setAttribute、getAttribute
+
+setAttribute は、指定した要素に新しい属性を追加できます。
+
+```html
+<div id="d1">ターゲット要素</div>
+```
+
+```js
+const d = document.getElementById("d1");
+d.setAttribute("align", "center");
+```
+
+getAttribute は、指定した要素の属性値を返します。指定された属性が存在しない場合は、 `null` になります。
+
+```js
+const div1 = document.getElementById("div1");
+const align = div1.getAttribute("align");
+
+alert(align);
+```
 
 - [setAttribute:MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/setAttribute)
 - [getAttribute:MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/getAttribute)
 
 ### appendChild、removeChild
+
+appendChild は、動的に要素を追加したいときに利用します。  
+removeChild は、要素を削除したときに利用します。
 
 - [appendChild:MDN](https://developer.mozilla.org/ja/docs/Web/API/Node/appendChild)
 - [removeChild:MDN](https://developer.mozilla.org/ja/docs/Web/API/Node/removeChild)
