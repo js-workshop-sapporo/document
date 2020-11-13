@@ -53,3 +53,113 @@ console.dir(title);
 したがって、上記のような html の場合、次のようなツリー構造と解釈されます。
 
 ![ドキュメントツリー](./document_tree.png)
+
+## 課題のヒント
+
+### addEventListener
+
+特定の要素に対してイベントを呼び出すための関数を設定できます。  
+今回はクリックやドラッグで何かをする処理が必要になるため、イベントを発行させたい要素に対して設定していきます。
+
+```js
+対象要素.click("種類", 関数, false);
+```
+
+第一引数：イベントの種類を設定します。
+
+- click
+- change
+- dragover
+- dragleave
+- dragenter
+- load
+- touch
+- touchmove
+- scroll など
+
+第二引数：イベントを発行したときに実行する処理を記述します。  
+第三引数：イベントの伝播方式の設定（true/false）します。
+
+イベントの伝播とは、親子関係にある HTML があった際に 2 つの要素にイベントリスナを登録します。
+同じイベントリスナを登録した子要素（.child）をクリクすると親のイベントも同時に発行されます。
+
+イベントの伝播順序
+
+1. キャプチャーフェーズ：window から指定した要素とその子要素に向けてイベントを読み取る
+2. ターゲットフェーズ：イベントが発生そた要素にイベントが伝わる
+3. バブリングフェーズ：イベント発生元から親要素にイベントが走る
+
+第三引数のイベントの伝播方式はこれらの処理をコントロールできます。
+
+- true：親から先に発行する（キャプチャーフェーズ）
+- false：子から先に発行する（パプリングフェーズ）※初期値
+
+パブリングをやめる場合や実行したイベントをキャンセルする場合
+
+- 伝播をやめる場合：`e.stopPropagation()`
+- デフォルトの挙動イベントをキャンセルする場合：`e.preventDefault()`
+
+```html
+<div class="parent">
+  <div class="child"></div>
+</div>
+```
+
+- [addEventListener:MDN](https://developer.mozilla.org/ja/docs/Web/API/EventTarget/addEventListener)
+
+### document.getElementById
+
+指定した id の値をもつ要素を Element オブジェクトとして返すメソッドになります。  
+HTML のタグから指定した id を習得を処理を行いたい時に利用します。
+
+- 指定した id が存在しない場合は、`null` を返します。
+
+利用例しては、一度変数に格納してから参照するのが一般的です。
+
+```html
+<div class="targetId">Id</div>
+```
+
+```js
+const targetId = document.getElementById("targetId");
+```
+
+- [getElementById:MDN](https://developer.mozilla.org/ja/docs/Web/API/Document/getElementById)
+
+### document.querySelectorAll、document.querySelector
+
+querySelector は、HTML 上の要素に設定したセレクタに一致する最初の HTML 要素を取得します。
+
+```js
+const className = document.querySelectorAll(".className");
+```
+
+querySelectorAll は、HTML 上の要素に設定したセレクタに一致するすべての HTML 要素を取得します。
+
+```js
+const classNameAll = document.querySelectorAll(".classNameAll");
+```
+
+クラスはセレクタを複数持たせるため、複数のセレクタにかけたい場合などに利用します。
+
+- [querySelectorAll:MDN](https://developer.mozilla.org/ja/docs/Web/API/Document/querySelectorAll)
+- [querySelector:MDN](https://developer.mozilla.org/ja/docs/Web/API/Document/querySelector)
+
+### classList.add、classList.remove
+
+- [classList;MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/classList)
+
+### setAttribute、getAttribute
+
+- [setAttribute:MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/setAttribute)
+- [getAttribute:MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/getAttribute)
+
+### appendChild、removeChild
+
+- [appendChild:MDN](https://developer.mozilla.org/ja/docs/Web/API/Node/appendChild)
+- [removeChild:MDN](https://developer.mozilla.org/ja/docs/Web/API/Node/removeChild)
+
+### FileReader、dataTransfer
+
+- [FileReader:MDN](https://developer.mozilla.org/ja/docs/Web/API/FileReader)
+- [dataTransfer:MDN](https://developer.mozilla.org/ja/docs/Web/API/DataTransfer)
