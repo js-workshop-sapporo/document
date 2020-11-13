@@ -11,7 +11,7 @@ Node.js のインストールについては[こちら](https://github.com/js-wo
 
 ## DOM について
 
-Web 制作をする上で DOM と JS は切って離せない関係といえるでしょう。  
+Web 制作をする上で DOM と JS は切って離せない関係と言えるでしょう。  
 課題に入る前に DOM とは何なのかをざっくりと知っていただくために下記を一読しておくことをおすすめします。
 
 ### DOM とは？
@@ -58,7 +58,7 @@ console.dir(title);
 
 ### addEventListener
 
-特定の要素に対してイベントを呼びだすための関数を設定できます。  
+特定の要素に対してイベントを呼び出すための関数を設定できます。  
 今回はクリックやドラッグで何かをする処理が必要になるため、イベントを発行させたい要素に対して設定していきます。
 
 ```js
@@ -147,8 +147,19 @@ const classNameAll = document.querySelectorAll(".classNameAll");
 
 ### classList.add、classList.remove
 
+- [classList;MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/classList)
+
 ### setAttribute、getAttribute
+
+- [setAttribute:MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/setAttribute)
+- [getAttribute:MDN](https://developer.mozilla.org/ja/docs/Web/API/Element/getAttribute)
 
 ### appendChild、removeChild
 
+- [appendChild:MDN](https://developer.mozilla.org/ja/docs/Web/API/Node/appendChild)
+- [removeChild:MDN](https://developer.mozilla.org/ja/docs/Web/API/Node/removeChild)
+
 ### FileReader、dataTransfer
+
+- [FileReader:MDN](https://developer.mozilla.org/ja/docs/Web/API/FileReader)
+- [dataTransfer:MDN](https://developer.mozilla.org/ja/docs/Web/API/DataTransfer)
